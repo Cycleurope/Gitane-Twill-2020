@@ -1,0 +1,1 @@
+@extends('twill::layouts.form')

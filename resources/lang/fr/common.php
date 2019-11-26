@@ -1,0 +1,24 @@
+<?php
+
+return [
+    'bike' => [
+        'singular' => 'Vélo',
+        'plural' => 'Vélos',
+    ],
+    'gitane_universe' => 'L\'univers Gitane',
+    'social_networks' => 'Réseaux Sociaux',
+    'find_a_dealer' => 'Trouver un revendeur',
+    'social_networks' => 'Réseaux Sociaux',
+    'no_store' => 'Aucun point de distribution',
+    'no_store_for_this_region' => "Il semble qu\'aucun distributeur ne soit présent dans ce département.",
+    'focus' => 'Focus sur ...',
+    'store' => [
+        'singular' => 'Distributeur',
+        'plural' => 'Distributeurs',
+    ],
+    'select_a_region' => 'Sélectionnez un département ...',
+    'gitane_mention' => 'Gitane et le logo Gitane sont des marques déposées par Cycleurope Industries S.A.S. en France et dans d\'autres pays.',
+    'contact_us' => 'Contactez-nous',
+    'cycleurope_portal' => 'Portail Cycleurope France',
+    'tandem_cycleurope' => 'B2B Tandem Cycleurope',
+];

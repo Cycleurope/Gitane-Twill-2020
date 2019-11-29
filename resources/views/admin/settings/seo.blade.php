@@ -8,60 +8,43 @@
 
 @section('contentFields')
     @formField('input', [
-        'label' => 'Global website title prefix',
-        'name' => 'title_prefix',
-        'textLimit' => '80',
-        'translated' => true
+        'label' => 'Titre du site (FR)',
+        'name' => 'website_title_fr',
+        'textLimit' => '160',
     ])
     @formField('input', [
-        'label' => 'Global website title prefix',
-        'name' => 'title_suffix',
-        'textLimit' => '80',
-        'translated' => true
+        'label' => 'Titre du site (EN)',
+        'name' => 'website_title_en',
+        'textLimit' => '160',
     ])
     @formField('input', [
-        'label' => 'Global website description prefix',
-        'name' => 'description_prefix',
-        'textLimit' => '80',
-        'translated' => true
+        'label' => 'Suffixe Global (FR)',
+        'name' => 'title_suffix_fr',
+        'textLimit' => '160',
     ])
     @formField('input', [
-        'label' => 'Global website description suffix',
-        'name' => 'description_suffix',
-        'textLimit' => '80',
-        'translated' => true
+        'label' => 'Suffixe global (EN)',
+        'name' => 'title_suffix_en',
+        'textLimit' => '160',
+    ])
+    @formField('input', [
+        'label' => 'Meta Description (FR)',
+        'name' => 'meta_description_fr',
+        'textLimit' => '160',
+    ])
+    @formField('input', [
+        'label' => 'Meta Description (EN)',
+        'name' => 'meta_description_en',
+        'textLimit' => '160',
+    ])
+    @formField('input', [
+        'label' => 'Meta Keywords (FR)',
+        'name' => 'meta_keywords_fr',
+        'textLimit' => '160',
+    ])
+    @formField('input', [
+        'label' => 'Meta Keywords (EN)',
+        'name' => 'meta_keywords_en',
+        'textLimit' => '160',
     ])
 @stop
-
-@section('fieldsets')
-    <a17-fieldset   title="Home" id="home" :open="true">
-            @formField('input', [
-                'label' => 'Homepage title',
-                'name' => 'homepage_title',
-                'textLimit' => '80',
-                'translated' => true
-            ])
-            @formField('input', [
-                'label' => 'Homepage description',
-                'name' => 'homepage_description',
-                'textLimit' => '80',
-                'translated' => true,
-                'type' => 'textarea'
-            ])
-    </a17-fieldset>
-    <a17-fieldset   title="Stores" id="stores" :open="true">
-            @formField('input', [
-                'label' => 'Stores title',
-                'name' => 'storespage_title',
-                'textLimit' => '80',
-                'translated' => true
-            ])
-            @formField('input', [
-                'label' => 'Stores description',
-                'name' => 'storespage_description',
-                'textLimit' => '80',
-                'translated' => true,
-                'type' => 'textarea'
-            ])
-    </a17-fieldset>
-@endsection

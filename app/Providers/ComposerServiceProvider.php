@@ -1,11 +1,11 @@
 <?php 
 
-namespace App\Providers  ;
+namespace App\Providers;
 
-use View  ;
-use Illuminate\Support\ServiceProvider  ;
-use App\Models\Family  ;
-use A17\Twill\Models\Feature  ;
+use View;
+use Illuminate\Support\ServiceProvider;
+use App\Models\Family;
+use A17\Twill\Models\Feature;
 use A17\Twill\Repositories\SettingRepository;
 
 
@@ -20,9 +20,25 @@ class ComposerServiceProvider extends ServiceProvider {
     {
         View::composer('layouts.head' , function( $view )
         {
-            $global_website_title_prefix = app(SettingRepository::class)->byKey('title_prefix', 'seo');
+            $website_title_fr = app(SettingRepository::class)->byKey('website_title_fr', 'seo');
+            $website_title_en = app(SettingRepository::class)->byKey('website_title_en', 'seo');
+            $meta_description_fr = app(SettingRepository::class)->byKey('meta_description_fr', 'seo');
+            $meta_description_en = app(SettingRepository::class)->byKey('meta_description_en', 'seo');
+            $meta_keywords_fr = app(SettingRepository::class)->byKey('meta_keywords_fr', 'seo');
+            $meta_keywords_en = app(SettingRepository::class)->byKey('meta_keywords_en', 'seo');
+            if(app()->getLocale() == 'en') {
+                $website_title = $website_title_en;
+                $meta_description = $meta_description_en;
+                $meta_keywords = $meta_keywords_en;
+            } else {
+                $website_title = $website_title_fr;
+                $meta_description = $meta_description_fr;
+                $meta_keywords = $meta_keywords_fr;
+            }
             $view->with([
-                'title_prefix' => $global_website_title_prefix 
+                'website_title' => $website_title,
+                'meta_description' => $meta_description,
+                'meta_keywords' => $meta_keywords,
             ]);
         });
         View::composer('layouts.frontmenu' , function( $view )

@@ -35,6 +35,9 @@ class AppServiceProvider extends ServiceProvider
             'families' => 'App\Models\Family' 
         ])  ;
         Relation::morphMap([
+            'countries' => 'App\Models\Country' 
+        ])  ;
+        Relation::morphMap([
             'pages' => 'App\Models\Page' 
         ])  ;
     }

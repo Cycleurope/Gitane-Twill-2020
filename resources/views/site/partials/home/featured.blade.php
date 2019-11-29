@@ -10,7 +10,7 @@
             @foreach($featured as $f)
             <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $f->slug]) }}" class="bike-tile col-12">
                 <div class="picture">
-                    <img src="{{ $f->image('gallery', 'default') }}" alt="" style="width: 100%">
+                    <img src="{{ $f->image('gallery', 'default', ['w' => 800]) }}" alt="" style="width: 100%">
                 </div>
                 <hr class="animated">
                 <div class="info">
@@ -27,7 +27,7 @@
                             @lang('bike.public_price')
                         @endif
                     </div>
-                    <div class="public-price">{!! $f->friendlyPublicPrice() !!} €</div>
+                    <div class="public-price">{!! $f->friendlyPublicPrice() !!}</div>
                     <div class="colors">
                         @foreach($f->colors as $c)
                         @if($c->hasImage('color_picture'))

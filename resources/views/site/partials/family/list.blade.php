@@ -3,7 +3,7 @@
         @foreach($family->bikes as $b)
         <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $b->slug]) }}" class="bike-tile col-12 col-sm-6 col-md-4 px-5 px-sm-2">
             <div class="picture">
-                <img src="{{ $b->image('gallery', 'default') }}" alt="" style="width: 100%">
+                <img src="{{ $b->image('gallery', 'default', ['w' => 800]) }}" alt="" style="width: 100%">
             </div>
             <hr class="animated">
             <div class="info">

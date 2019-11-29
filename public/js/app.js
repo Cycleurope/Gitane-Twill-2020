@@ -115,4 +115,16 @@ $(document).ready(function() {
             }
         });
     });
+    $("#bike-navigation").find('.bike-nav-item').click( function() {
+        $('.bike-nav-item').each(function() {
+            $(this).removeClass('current-item');
+        });
+        $(this).addClass('current-item');
+    });
+    $("#stores-navigation").find('.store-nav-item').click( function() {
+        $('.store-nav-item').each(function() {
+            $(this).removeClass('current-item');
+        });
+        $(this).addClass('current-item');
+    });
 });

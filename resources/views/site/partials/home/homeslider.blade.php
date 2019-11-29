@@ -19,6 +19,7 @@
                     class="more"
                     @if( $slide->target_blank )
                     target="_blank"
+                    rel='noopener'
                     @endif
                     >{{ $slide->translate(app()->getLocale())->label }}</a>
                 @endif

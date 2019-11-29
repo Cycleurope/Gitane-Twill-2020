@@ -21,11 +21,4 @@ return [
     'contact_us' => 'Contact Us',
     'cycleurope_portal' => 'Cycleurope France Portal',
     'tandem_cycleurope' => 'Tandem Cycleurope B2B',
-    'europa' => 'Europa',
-    'america' => 'America',
-    'north_america' => 'North America',
-    'south_america' => 'South America',
-    'africa' => 'Africa',
-    'asia' => 'Asia',
-    'oceania' => 'Oceania',
 ];

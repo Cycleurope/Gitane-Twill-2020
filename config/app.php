@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME' , 'Gitane') ,
+    'name' => env('APP_NAME' , 'Laravel') ,
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL' , 'gitanetwill22.mac'),
+    'url' => env('APP_URL' , 'http://localhost'),
 
     'asset_url' => env('ASSET_URL' , null) ,
 
@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'fr' ,
+    'locale' => 'en' ,
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'fr' ,
+    'fallback_locale' => 'en' ,
 
     /*
     |--------------------------------------------------------------------------

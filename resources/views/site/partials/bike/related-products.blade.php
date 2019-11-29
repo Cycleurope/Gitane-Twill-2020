@@ -8,10 +8,9 @@
         </div>
         <div class="row">
             @foreach($related_bikes as $rb)
-            @if($rb->reference != $bike->reference)
             <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $rb->slug]) }}" class="bike-tile col-12 col-sm-6 col-md-3">
                 <div class="picture">
-                    <img src="{{ $rb->image('gallery', 'default', ['w' => 600])}}" alt="">
+                    <img src="{{ $rb->image('gallery', 'default')}}" alt="">
                 </div>
                 <hr class="animated">
                 <div class="info">
@@ -26,13 +25,12 @@
                     <div class="colors">
                         @foreach($rb->colors as $c)
                         @if($c->hasImage('color_picture'))
-                        <div class="color"><img src="{{ $c->image('color_picture', 'default', ['w' => 800]) }}" alt=""></div>
+                        <div class="color"><img src="{{ $c->image('color_picture', 'default') }}" alt=""></div>
                         @endif
                         @endforeach
                     </div>
                 </div>
             </a> 
-            @endif
             @endforeach
         </div>
     </div>

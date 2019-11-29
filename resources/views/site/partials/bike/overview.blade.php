@@ -1,7 +1,7 @@
 <section class="page-section" id="product-overview">
     <div class="container-fluid">
         <div class="row">
-                @php( $images = $bike->images('gallery', 'default', ['w' => 1200]) )
+                @php( $images = $bike->images('gallery', 'default') )
                 <div id="product-pictures" class="col-12 col-lg-7 px-0 py-5 owl-carousel">
                     @foreach( $images as $item )
                         <img src="{{ $item }}" alt="">

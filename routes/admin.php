@@ -20,4 +20,3 @@ Route::module('sizes' , ['as' => 'admin'] , ['only' => ['edit']])  ;
 Route::module('accessories' , ['as' => 'admin'] , ['only' => ['edit']])  ;
 Route::module('geometries' , ['as' => 'admin'] , ['only' => ['edit']])  ;
 Route::module('bikes' , ['as' => 'admin'] , ['only' => ['edit']])  ;
-Route::module('countries' , ['as' => 'admin'] , ['only' => ['edit']])  ;

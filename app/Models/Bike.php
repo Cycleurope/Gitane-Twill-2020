@@ -265,41 +265,4 @@ class Bike extends Model implements Sortable
     {
         return $this->belongsToMany(Certificate::class);
     }
-
-    public function getFamiliesSelectedAttribute($value)
-    {
-        return  $this->families->implode('title', ', ');
-    }
-
-    public function getPublicPriceSelectedAttribute($value)
-    {
-        $public_price = $this->public_price;
-        if($public_price > 0) {
-            return  $this->public_price." €";
-        } else {
-            return "<span style='color: red;'>N.C.</span>";
-        }
-    }
-
-    public function getSizesCountAttribute($value)
-    {
-        $sizes = $this->belongsToMany(\App\Models\Size::class)->count();
-        if($sizes > 0) {
-            $return = $sizes;
-        } else {
-            $return = '<span style="color: red;">'.$sizes.'</span>';
-        }
-        return $return;
-    }
-
-    public function getColorsCountAttribute($value)
-    {
-        $colors = $this->belongsToMany(\App\Models\Color::class)->count();
-        if($colors > 0) {
-            $return = $colors;
-        } else {
-            $colors = '<span style="color: red;">'.$sizes.'</span>';
-        }
-        return $return;
-    }
 }

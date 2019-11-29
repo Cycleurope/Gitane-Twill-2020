@@ -85,9 +85,4 @@ class Store extends Model implements Sortable
         }
         return $friendlyPhone;
     }
-
-    public function countries()
-    {
-        return $this->belongsToMany(\App\Models\Country::class);
-    }
 }

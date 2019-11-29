@@ -24,11 +24,5 @@ Route::group(['prefix' => '{locale}' , 'where' => ['locale' => '[a-zA-Z]{2}'] , 
     Route::get('/stores' , 'StoreController@index')->name('site.stores')  ;
     Route::get('/{page}' , 'PageController@show')->name('site.pages.show')  ;
 })  ;
-Route::get('/stores/europa' , 'StoreController@getEuropeanStores')->name('site.stores.europa') ;
-Route::get('/stores/north-america' , 'StoreController@getNorthAmericanStores')->name('site.stores.northamerica') ;
-Route::get('/stores/south-america' , 'StoreController@getSouthAmericanStores')->name('site.stores.southamerica') ;
-Route::get('/stores/africa' , 'StoreController@getAfricanStores')->name('site.stores.africa') ;
-Route::get('/stores/asia' , 'StoreController@getAsianStores')->name('site.stores.asia') ;
-Route::get('/stores/oceania' , 'StoreController@getOceanianStores')->name('site.stores.oceania') ;
 Route::get('/stores/{dep}' , 'StoreController@getStoresForDepartment')->name('site.stores.fordepartment')  ;
 

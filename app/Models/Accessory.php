@@ -19,14 +19,14 @@ class Accessory extends Model implements Sortable
         'picture',
         'position',
         'reference',
-    ]  ;
+    ];
 
     // uncomment and modify this as needed if you use the HasTranslation trait
     public $translatedAttributes = [
         'title',
         'description',
         'name',
-    ]  ;
+    ];
 
     // add checkbox fields names here (published toggle is itself a checkbox)
     public $checkboxes = [
@@ -57,6 +57,6 @@ class Accessory extends Model implements Sortable
 
     public function bikes()
     {
-        return $this->belongsToMany(Bike::class)  ;
+        return $this->belongsToMany(Bike::class);
     }
 }

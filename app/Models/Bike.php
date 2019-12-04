@@ -171,58 +171,58 @@ class Bike extends Model implements Sortable
     public function emptyElectricComponents()
     {
 
-        $engine             = trim($this->engine)  ;
-        $battery            = trim($this->battery)  ;
-        $display            = trim($this->display)  ;
-        $charger            = trim($this->charger)  ;
-        $distance_range     = trim($this->distance_range)  ;
+        $engine             = trim($this->engine);
+        $battery            = trim($this->battery);
+        $display            = trim($this->display);
+        $charger            = trim($this->charger);
+        $distance_range     = trim($this->distance_range);
         if($engine == '' 
             && $battery == '' 
             && $display == '' 
             && $charger == '' 
-            && $distance_range == '') return 1  ;
-        return 0  ;
+            && $distance_range == '') return 1;
+        return 0;
 
     }
 
     public function emptyWheels()
     {
-        $rims       = trim($this->rims)  ;
-        $hubs       = trim($this->hubs)  ;
-        $tires      = trim($this->tires)  ;
-        if(empty($rims) && empty($hubs) && empty($tires) ) return 1  ;
-        return 0  ;
+        $rims       = trim($this->rims);
+        $hubs       = trim($this->hubs);
+        $tires      = trim($this->tires);
+        if(empty($rims) && empty($hubs) && empty($tires) ) return 1;
+        return 0;
     }
 
     public function emptyTransmission()
     {
-        $transmission       = trim($this->transmission)  ;
-        $shifters           = trim($this->shifters)  ;
-        $rear_derailleur    = trim($this->rear_derailleur)  ;
-        $front_derailleur   = trim($this->front_derailleur)  ;
-        $crankset           = trim($this->crankset)  ;
-        $cassette           = trim($this->cassette)  ;
+        $transmission       = trim($this->transmission);
+        $shifters           = trim($this->shifters);
+        $rear_derailleur    = trim($this->rear_derailleur);
+        $front_derailleur   = trim($this->front_derailleur);
+        $crankset           = trim($this->crankset);
+        $cassette           = trim($this->cassette);
         if($shifters == '' 
             && $transmission == '' 
             && $rear_derailleur == '' 
             && $front_derailleur == '' 
             && $crankset == '' 
-            && $cassette == '') return 1  ;
-        return 0  ;
+            && $cassette == '') return 1;
+        return 0;
         
     }
 
     public function emptyComponents()
     {
 
-        $saddle             = trim($this->saddle)  ;
-        $seatpost           = trim($this->seatpost)  ;
-        $handlebars         = trim($this->handlebars)  ;
-        $stem               = trim($this->stem)  ;
-        $brakes             = trim($this->brakes)  ;
-        $pedals             = trim($this->pedals)  ;
+        $saddle             = trim($this->saddle);
+        $seatpost           = trim($this->seatpost);
+        $handlebars         = trim($this->handlebars);
+        $stem               = trim($this->stem);
+        $brakes             = trim($this->brakes);
+        $pedals             = trim($this->pedals);
         if (empty($saddle) && empty($seatpost) && empty($handlebars) && empty($stem) && empty($brakes) && empty($pedals) ) return 1  ;
-        return 0  ;
+        return 0;
 
     }
 
@@ -234,8 +234,8 @@ class Bike extends Model implements Sortable
             && $this->emptyTransmission()
             && $this->emptyComponents()
             && $this->emptyAccessories()
-        ) return 1  ;
-        return 0  ;
+        ) return 1;
+        return 0;
     }
 
     public function emptyAccessories()
@@ -248,7 +248,7 @@ class Bike extends Model implements Sortable
         $stand              = trim($this->stand)  ;
         $plus               = trim($this->plus)  ;
         if (empty($mudguards) && empty($racks) && empty($chainguard) && empty($lightings) && empty($stand) && empty($plus)) return 1  ;
-        return 0  ;
+        return 0;
 
     }
 

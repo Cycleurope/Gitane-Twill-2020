@@ -1,32 +1,32 @@
 <?php
 
-namespace App\Models  ;
+namespace App\Models;
 
-use A17\Twill\Models\Behaviors\HasBlocks  ;
-use A17\Twill\Models\Behaviors\HasTranslation  ;
-use A17\Twill\Models\Behaviors\HasSlug  ;
-use A17\Twill\Models\Behaviors\HasMedias  ;
-use A17\Twill\Models\Behaviors\HasFiles  ;
-use A17\Twill\Models\Behaviors\HasPosition  ;
-use A17\Twill\Models\Behaviors\Sortable  ;
-use A17\Twill\Models\Model  ;
+use A17\Twill\Models\Behaviors\HasBlocks;
+use A17\Twill\Models\Behaviors\HasTranslation;
+use A17\Twill\Models\Behaviors\HasSlug;
+use A17\Twill\Models\Behaviors\HasMedias;
+use A17\Twill\Models\Behaviors\HasFiles;
+use A17\Twill\Models\Behaviors\HasPosition;
+use A17\Twill\Models\Behaviors\Sortable;
+use A17\Twill\Models\Model;
 
 class Bike extends Model implements Sortable
 {
-    use HasBlocks, HasTranslation, HasSlug, HasMedias, HasFiles, HasPosition  ;
+    use HasBlocks, HasTranslation, HasSlug, HasMedias, HasFiles, HasPosition;
 
     protected $fillable = [
-        'published' ,
-        'title' , 'weight' ,
-        'reference' , 'price_from' , 'public_price' ,
-        'position' , 'datasheet_theme' , 'geometries_theme' ,
-        'price_from' , 'public_price' , 'datasheet_theme' , 'geometries_theme' ,
+        'published',
+        'title', 'weight' ,
+        'reference', 'price_from', 'public_price',
+        'position', 'datasheet_theme', 'geometries_theme',
+        'price_from', 'public_price', 'datasheet_theme', 'geometries_theme',
     ]  ;
 
     public $translatedAttributes = [
-        'title' ,
-        'name' , 'subname' ,
-        'description' ,
+        'title',
+        'name' , 'subname',
+        'description',
         'frame' , 'fork' , 'rear_suspension' ,
         'engine' , 'battery' , 'display' , 'distance_range' , 'charger' ,
         'rims' , 'hubs' , 'tires' ,
@@ -125,12 +125,12 @@ class Bike extends Model implements Sortable
 
     public function accessories()
     {
-        return $this->belongsToMany(\App\Models\Accessory::class)  ;
+        return $this->belongsToMany(\App\Models\Accessory::class);
     }
 
     public function geometries()
     {
-        return $this->belongsToMany(\App\Models\Geometry::class)  ;
+        return $this->belongsToMany(\App\Models\Geometry::class);
     }
 
     public function friendlyPublicPrice()

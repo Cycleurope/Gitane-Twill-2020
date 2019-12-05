@@ -15,8 +15,8 @@ class AppController extends Controller
         $featured = Feature::where('bucket_key' , 'home_primary_featured')->get()->map(function($feature) {
             return $feature->featured;
         });
-        $slides = Slide::all();
-        $families = Family::all();
+        $slides = Slide::where('published', 1)->get();
+        $families = Family::where('published', 1)->get();
         return view('site.home', [
             'families' => $families,
             'slides' => $slides,

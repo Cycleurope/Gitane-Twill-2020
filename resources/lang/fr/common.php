@@ -1,6 +1,12 @@
 <?php
 
 return [
+    'europa' => 'Europe',
+    'north_america' => 'Amérique du Nord',
+    'south_america' => 'Amérique du Sud',
+    'africa' => 'Afrique',
+    'asia' => 'Asie',
+    'oceania' => 'Océanie',
     'bike' => [
         'singular' => 'Vélo',
         'plural' => 'Vélos',

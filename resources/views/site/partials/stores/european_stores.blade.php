@@ -2,7 +2,7 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-12"><h2>Europe</h2></div>
+            <div class="col-12"><h2>@lang('common.europa')</h2></div>
         </div>
         <div class="row">
         @foreach($european_stores as $store)

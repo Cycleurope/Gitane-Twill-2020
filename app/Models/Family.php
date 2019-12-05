@@ -47,7 +47,7 @@ class Family extends Model implements Sortable
             'default' => [
                 [
                     'name' => 'landscape',
-                    'ratio' => 1800 / 360,
+                    'ratio' => 1800 / 540,
                 ],
             ],
         ],

@@ -1,3 +1,4 @@
+@if($family->hasImage('desktop_cover'))
 <section id="family-cover">
     <div class="container-fluid">
         <div class="row">
@@ -11,3 +12,4 @@
         </div>
     </div>
 </section>
+@endif

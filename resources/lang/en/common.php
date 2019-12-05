@@ -15,6 +15,7 @@ return [
         'singular' => 'Family',
         'plural' => 'Families',
     ],
+    'related_products' => 'In the same family',
     'gitane_universe' => 'Gitane\'s Universe',
     'social_networks' => 'Social Networks',
     'find_a_dealer' => 'Find a dealer',

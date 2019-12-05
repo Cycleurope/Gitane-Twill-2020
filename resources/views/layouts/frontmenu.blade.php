@@ -7,8 +7,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 @foreach($homenav as $f)
-                <li class="nav-item"><a class="nav-link" href="{{ route('site.families.show', ['locale' => app()->getLocale(
-                        ), 'family' => $f->slug ])}}">{{ $f->translate(app()->getLocale())->title }}</a></li>
+                    @if($f->published)
+                    <li class="nav-item"><a class="nav-link" href="{{ route('site.families.show', ['locale' => app()->getLocale(
+                            ), 'family' => $f->slug ])}}">{{ $f->translate(app()->getLocale())->title }}</a></li>
+                    @endif
                 @endforeach
             
             </ul>

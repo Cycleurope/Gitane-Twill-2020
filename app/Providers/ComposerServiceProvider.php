@@ -32,30 +32,30 @@ class ComposerServiceProvider extends ServiceProvider {
         View::composer('layouts.frontmenu' , function( $view )
         {
             $frontmenu = Feature::where('bucket_key' , 'primary_navigation')->get()->map(function($feature) {
-                return $feature->featured  ;
-            })  ;
+                return $feature->featured;
+            });
             $view->with([
                 'homenav' => $frontmenu 
-            ])  ;
-        })  ;
+            ]);
+        });
         View::composer('layouts.footer.footermenu' , function( $view )
         {
             $frontmenu = Feature::where('bucket_key' , 'primary_navigation')->get()->map(function($feature) {
-                return $feature->featured  ;
-            })  ;
+                return $feature->featured;
+            });
             $view->with([
                 'homenav' => $frontmenu 
-            ])  ;
-        })  ;
+            ]);
+        });
         View::composer('layouts.footer.pagesmenu' , function( $view )
         {
             $footermenu = Feature::where('bucket_key' , 'pages_navigation')->get()->map(function($feature) {
-                return $feature->featured  ;
-            })  ;
+                return $feature->featured;
+            });
             $view->with([
                 'pagesnav' => $footermenu
-            ])  ;
-        })  ;
+            ]);
+        });
         View::composer('layouts.footer.socialnetworks' , function( $view )
         {
             $facebook = app(SettingRepository::class)->byKey('facebook', 'social');

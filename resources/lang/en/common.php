@@ -1,15 +1,19 @@
 <?php
 
 return [
-    'europa' => 'Europe',
-    'north_america' => 'Amérique du Nord',
-    'south_america' => 'Amérique du Sud',
-    'africa' => 'Afrique',
-    'asia' => 'Asie',
-    'oceania' => 'Océanie',
+    'europa' => 'EUropa',
+    'north_america' => 'North America',
+    'south_america' => 'SOuth America',
+    'africa' => 'Africa',
+    'asia' => 'Asia',
+    'oceania' => 'Oceania',
     'bike' => [
         'singular' => 'Bike',
         'plural' => 'Bikes',
+    ],
+    'family' => [
+        'singular' => 'Family',
+        'plural' => 'Families',
     ],
     'gitane_universe' => 'Gitane\'s Universe',
     'social_networks' => 'Social Networks',

@@ -11,6 +11,10 @@ return [
         'singular' => 'Vélo',
         'plural' => 'Vélos',
     ],
+    'family' => [
+        'singular' => 'Famille',
+        'plural' => 'Familles',
+    ],
     'gitane_universe' => 'L\'univers Gitane',
     'social_networks' => 'Réseaux Sociaux',
     'find_a_dealer' => 'Trouver un revendeur',

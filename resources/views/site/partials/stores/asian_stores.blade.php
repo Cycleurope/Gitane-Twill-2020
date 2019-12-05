@@ -1,5 +1,5 @@
 @if(count($asian_stores) > 0)
-<section>
+<section id="stores-asia">
     <div class="container">
         <div class="row">
             <div class="col-12">

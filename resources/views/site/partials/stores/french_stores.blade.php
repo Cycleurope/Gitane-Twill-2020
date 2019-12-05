@@ -1,6 +1,5 @@
 <section id="stores-france">
     <div class="container">
-
         <div class="row py-5">
             <div class="col-12"><h2>France</h2></div>
             <div class="col-12">

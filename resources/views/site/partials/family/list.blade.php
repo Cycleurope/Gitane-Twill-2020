@@ -6,7 +6,7 @@
                 @if($b->hasImage('gallery'))
                 <img src="{{ $b->image('gallery', 'default') }}" alt="" style="width: 100%">
                 @else
-                No picture
+                <img src="/img/family/default-thumbnail-900-600.jpg" alt="">
                 @endif
             </div>
             <hr class="animated">

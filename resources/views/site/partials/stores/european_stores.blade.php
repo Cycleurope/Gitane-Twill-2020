@@ -1,5 +1,5 @@
 @if(count($european_stores) > 0)
-<section>
+<section id="stores-europa">
     <div class="container">
         <div class="row">
             <div class="col-12"><h2>@lang('common.europa')</h2></div>

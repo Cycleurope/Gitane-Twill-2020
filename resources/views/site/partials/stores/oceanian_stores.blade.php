@@ -1,5 +1,5 @@
 @if(count($oceanian_stores) > 0)
-<section>
+<section id="stores-oceania">
     <div class="container">
         <div class="row">
             <div class="col-12"><h2>@lang('common.oceania')</h2></div>

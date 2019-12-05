@@ -13,11 +13,11 @@ class CreateBikeFamilyTable extends Migration
      */
     public function up()
     {
-        Schema::create('bike_family' ; function (Blueprint $table) {
-            $table->bigIncrements('id')  ;
-            $table->timestamps()  ;
-            $table->integer('position')->unsigned()  ;
-            createDefaultRelationshipTableFields($table ; 'bike' ; 'family')  ;
+        Schema::create('bike_family', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->timestamps();
+            $table->integer('position')->unsigned();
+            createDefaultRelationshipTableFields($table, 'bike', 'family');
         })  ;
     }
 

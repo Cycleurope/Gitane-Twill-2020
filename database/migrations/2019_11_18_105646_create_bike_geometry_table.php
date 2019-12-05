@@ -14,10 +14,10 @@ class CreateBikeGeometryTable extends Migration
     public function up()
     {
         Schema::create('bike_geometry' , function (Blueprint $table) {
-            $table->bigIncrements('id')  ;
-            $table->timestamps()  ;
-            $table->integer('position')->unsigned()  ;
-            createDefaultRelationshipTableFields($table, 'bike', 'geometry')  ;
+            $table->bigIncrements('id');
+            $table->timestamps();
+            $table->integer('position')->unsigned();
+            createDefaultRelationshipTableFields($table, 'bike', 'geometry');
 
         })  ;
     }
@@ -29,6 +29,6 @@ class CreateBikeGeometryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bike_geometry')  ;
+        Schema::dropIfExists('bike_geometry');
     }
 }

@@ -14,10 +14,10 @@ class CreateBikeSizeTable extends Migration
     public function up()
     {
         Schema::create('bike_size', function (Blueprint $table) {
-            $table->bigIncrements('id')  ;
-            $table->timestamps()  ;
-            $table->integer('position')->unsigned()  ;
-            createDefaultRelationshipTableFields($table ,'bike' , 'size')  ;
+            $table->bigIncrements('id');
+            $table->timestamps();
+            $table->integer('position')->unsigned();
+            createDefaultRelationshipTableFields($table ,'bike' , 'size');
         })  ;
     }
 
@@ -28,6 +28,6 @@ class CreateBikeSizeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bike_size')  ;
+        Schema::dropIfExists('bike_size');
     }
 }

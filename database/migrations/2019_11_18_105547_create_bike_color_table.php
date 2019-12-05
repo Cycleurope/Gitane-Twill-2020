@@ -14,10 +14,10 @@ class CreateBikeColorTable extends Migration
     public function up()
     {
         Schema::create('bike_color', function (Blueprint $table) {
-            $table->bigIncrements('id')  ;
-            $table->timestamps()  ;
-            $table->integer('position')->unsigned()  ;
-            createDefaultRelationshipTableFields($table , 'bike' , 'color')  ;
+            $table->bigIncrements('id');
+            $table->timestamps();
+            $table->integer('position')->unsigned();
+            createDefaultRelationshipTableFields($table , 'bike' , 'color');
         })  ;
     }
 

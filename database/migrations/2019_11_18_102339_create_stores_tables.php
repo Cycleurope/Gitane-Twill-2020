@@ -8,8 +8,8 @@ class CreateStoresTables extends Migration
     public function up()
     {
         Schema::create('stores', function (Blueprint $table) {
-            createDefaultTableFields($table)  ;
-            $table->string('title', 200)->nullable()  ;
+            createDefaultTableFields($table);
+            $table->string('title', 200)->nullable();
             $table->string('name', 200)->nullable()  ;
             $table->string('code', 16)->nullable()  ;
             $table->string('address1', 200)->nullable()  ;
@@ -21,7 +21,7 @@ class CreateStoresTables extends Migration
             $table->string('latitude', 200)->nullable()  ;
             $table->string('longitude', 200)->nullable()  ;
             $table->integer('position')->unsigned()->nullable()  ;
-        })  ;
+        });
     }
 
     public function down()

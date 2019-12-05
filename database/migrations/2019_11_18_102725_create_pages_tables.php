@@ -9,27 +9,27 @@ class CreatePagesTables extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             
-            createDefaultTableFields($table)  ;
-            $table->string('title', 200)->nullable()  ;
-            $table->text('description')->nullable()  ;
+            createDefaultTableFields($table);
+            $table->string('title', 200)->nullable();
+            $table->text('description')->nullable();
         })  ;
 
         Schema::create('page_translations', function (Blueprint $table) {
-            createDefaultTranslationsTableFields($table, 'page')  ;
-            $table->string('title', 200)->nullable()  ;
-            $table->text('description')->nullable()  ;
+            createDefaultTranslationsTableFields($table, 'page');
+            $table->string('title', 200)->nullable();
+            $table->text('description')->nullable();
         })  ;
 
         Schema::create('page_slugs' , function (Blueprint $table) {
-            createDefaultSlugsTableFields($table, 'page')  ;
+            createDefaultSlugsTableFields($table, 'page');
         })  ;
 
     }
 
     public function down()
     {
-        Schema::dropIfExists('page_translations')  ;
-        Schema::dropIfExists('page_slugs')  ;
-        Schema::dropIfExists('pages')  ;
+        Schema::dropIfExists('page_translations');
+        Schema::dropIfExists('page_slugs');
+        Schema::dropIfExists('pages');
     }
 }

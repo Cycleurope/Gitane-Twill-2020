@@ -14,9 +14,9 @@ class CreateAccessoryBikeTable extends Migration
     public function up()
     {
         Schema::create('accessory_bike', function (Blueprint $table) {
-            $table->bigIncrements('id')  ;
-            $table->timestamps()  ;
-            $table->integer('position')->unsigned()  ;
+            $table->bigIncrements('id');
+            $table->timestamps();
+            $table->integer('position')->unsigned();
             createDefaultRelationshipTableFields($table, 'bike', 'accessory')  ;
         })  ;
     }

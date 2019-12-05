@@ -9,14 +9,14 @@ class CreateGeometriesTables extends Migration
     {
         Schema::create('geometries',  function (Blueprint $table) {
             
-            createDefaultTableFields($table)  ;
-            $table->string('title', 200)->nullable()  ;
+            createDefaultTableFields($table);
+            $table->string('title', 200)->nullable();
         })  ;
 
     }
 
     public function down()
     {
-        Schema::dropIfExists('geometries')  ;
+        Schema::dropIfExists('geometries');
     }
 }

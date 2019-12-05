@@ -17,7 +17,7 @@ class CreateBikeCertificateTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->integer('position')->unsigned();
-            createDefaultRelationshipTableFields($table , 'bike' , 'certificate');
+            createDefaultRelationshipTableFields($table, 'bike', 'certificate');
         });
     }
 

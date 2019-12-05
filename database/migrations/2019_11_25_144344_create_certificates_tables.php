@@ -34,16 +34,6 @@ class CreateCertificatesTables extends Migration
             // $table->string('title', 200)->nullable();
             // $table->text('description')->nullable();
         });
-
-        // remove this if you're not going to use slugs, ie. using the HasSlug trait
-        Schema::create('certificate_slugs', function (Blueprint $table) {
-            createDefaultSlugsTableFields($table, 'certificate');
-        });
-
-        // remove this if you're not going to use revisions, ie. using the HasRevisions trait
-        Schema::create('certificate_revisions', function (Blueprint $table) {
-            createDefaultRevisionsTableFields($table, 'certificate');
-        });
     }
 
     public function down()

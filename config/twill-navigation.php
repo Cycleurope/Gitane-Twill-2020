@@ -12,15 +12,15 @@ return [
             'families' => [
                 'title' => 'Familles' ,
                 'module' => true
-            ] ,
+            ],
             'bikes' => [
                 'title' => 'Vélos' ,
                 'module' => true
-            ] ,
+            ],
             'colors' => [
                 'title' => 'Coloris' ,
                 'module' => true
-            ] ,
+            ],
             'sizes' => [
                 'title' => 'Tailles' ,
                 'module' => true

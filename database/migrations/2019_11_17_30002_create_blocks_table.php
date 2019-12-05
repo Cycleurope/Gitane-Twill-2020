@@ -18,7 +18,7 @@ class CreateBlocksTable extends Migration
             $table->integer('blockable_id')->nullable()->unsigned()  ;
             $table->string('blockable_type')->nullable()  ;
             $table->integer('position')->unsigned()  ;
-            $table->json('content')  ;
+            $table->text('content')  ;
             $table->string('type')  ;
             $table->string('child_key')->nullable()  ;
             $table->integer('parent_id')->nullable()->unsigned()  ;

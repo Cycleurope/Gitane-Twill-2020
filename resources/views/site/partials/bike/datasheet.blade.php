@@ -1,6 +1,6 @@
 @if( !$bike->emptyDataSheet() )
 <section id="product-specifications" class="py-5">
-    <div class="container">
+    <div class="container-fluid px-5">
         <div class="row">
             <div class="col-12">
                 <h2><span>@lang('bike.specifications')</span></h2>

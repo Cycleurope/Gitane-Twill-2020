@@ -73,6 +73,12 @@ $(document).ready(function() {
         'loop': true,
         'autoplay': true,
     });
+    $('.bike-nav-item').click(function() {
+        $('.bike-nav-item').each(function() {
+            $(this).removeClass('current-item');
+        });
+        $(this).addClass('current-item');
+    }); 
 
     var store_item;
     var address_line1 = '';

@@ -61,7 +61,7 @@
             <div class="row px-3 py-2">
                 <a href="#stores-france" class="badge badge-pill store-nav-item current-item">France</a>
                 @if(count($european_stores) > 0)
-                <a href="#stores-europa" class="badge badge-pill store-nav-item current-item">@lang('common.europa')</a>
+                <a href="#stores-europa" class="badge badge-pill store-nav-item">@lang('common.europa')</a>
                 @endif
                 @if(count($northamerican_stores) > 0)
                 <a href="#stores-northamerica" class="badge badge-pill store-nav-item">@lang('common.north_america')</a>

@@ -1,4 +1,4 @@
-<div class="container-fluid py-5">
+<div class="container-fluid py-5 px-xl-5">
     <div class="row">
         @foreach($family->bikes as $b)
             @if($b->published)

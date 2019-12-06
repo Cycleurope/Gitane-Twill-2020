@@ -27,7 +27,7 @@
                             @lang('bike.public_price')
                         @endif
                     </div>
-                    <div class="public-price">{!! $f->friendlyPublicPrice() !!} €</div>
+                    <div class="public-price">{!! $f->friendlyPublicPrice() !!}</div>
                     <div class="colors">
                         @foreach($f->colors as $c)
                         @if($c->hasImage('color_picture'))

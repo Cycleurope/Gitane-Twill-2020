@@ -1,6 +1,6 @@
 @if(count($bike->geometries) > 0)
 <section id="product-geometries" class="py-5 {{ $bike->geometries_theme }}">
-    <div class="container">
+    <div class="container-fluid px-lg-5">
         <div class="row">
             <div class="g-head g-head-white g-head-a20">g head-white
         </div>

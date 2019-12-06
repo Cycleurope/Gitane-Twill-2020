@@ -21,7 +21,7 @@ return [
     'find_a_dealer' => 'Trouver un revendeur',
     'social_networks' => 'Réseaux Sociaux',
     'no_store' => 'Aucun point de distribution',
-    'no_store_for_this_region' => "Il semble qu\'aucun distributeur ne soit présent dans ce département.",
+    'no_store_for_this_region' => "Aucun distributeur Gitane dans ce département.",
     'focus' => 'Focus sur ...',
     'store' => [
         'singular' => 'Distributeur',

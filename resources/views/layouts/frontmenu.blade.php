@@ -35,7 +35,7 @@
                     <span class="gitane-logo">G</span>
                     <span class="name">{{ $bike->name}} {{ $bike->subname }}</span>
                     <span class="d-none d-lg-inline">
-                    <a id="bn-overview" href="#product-overview" class="badge badge-pill bike-nav-item">@lang('bike.overview')</a>
+                    <a id="bn-overview" href="#product-overview" class="badge badge-pill bike-nav-item current-item">@lang('bike.overview')</a>
                     @if(count($bike->blocks) > 0)
                     <a href="#product-features" class="badge badge-pill bike-nav-item">@lang('bike.feature.plural')</a>
                     @endif

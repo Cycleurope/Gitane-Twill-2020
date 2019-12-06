@@ -77,13 +77,13 @@ $(document).ready(function() {
         $('.bike-nav-item').each(function() {
             $(this).removeClass('current-item');
         });
-        $(this).addClass('.current-item');
+        $(this).addClass('current-item');
     });
     $('.store-nav-item').click(function() {
         $('.store-nav-item').each(function() {
             $(this).removeClass('current-item');
         });
-        $(this).addClass('.current-item');
+        $(this).addClass('current-item');
     }); 
 
     var store_item;

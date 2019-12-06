@@ -2,10 +2,10 @@
     <div class="row">
         @foreach($family->bikes as $b)
             @if($b->published)
-            <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $b->slug]) }}" class="bike-tile col-12 col-sm-6 col-md-4 px-5 px-sm-2">
+            <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $b->slug]) }}" class="bike-tile col-12 col-sm-6 col-md-4 col-xl-4 px-5 px-sm-2">
                 <div class="picture">
                     @if($b->hasImage('gallery'))
-                    <img src="{{ $b->image('gallery', 'default', ['w' => 400]) }}" alt="" style="width: 100%">
+                    <img src="{{ $b->image('gallery', 'default', ['w' => 600]) }}" alt="" style="width: 100%">
                     @else
                     <img src="/img/family/default-thumbnail-900-600.jpg" alt="">
                     @endif

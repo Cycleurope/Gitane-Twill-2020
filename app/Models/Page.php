@@ -49,6 +49,18 @@ class Page extends Model
                     'ratio' => 1800 / 540,
                 ],
             ],
+            'tablet' => [
+                [
+                    'name' => 'landscape',
+                    'ratio' => 1800 / 800,
+                ],
+            ],
+            'mobile' => [
+                [
+                    'name' => 'landscape',
+                    'ratio' => 800 / 600,
+                ],
+            ],
         ],
     ];
 }

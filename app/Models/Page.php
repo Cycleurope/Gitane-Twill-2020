@@ -43,21 +43,17 @@ class Page extends Model
     // uncomment and modify this as needed if you use the HasMedias trait
     public $mediasParams = [
         'cover' => [
-            'desktop' => [
+            'default' => [
                 [
-                    'name' => 'landscape',
+                    'name' => 'desktop',
                     'ratio' => 1800 / 540,
                 ],
-            ],
-            'tablet' => [
                 [
-                    'name' => 'landscape',
+                    'name' => 'tablet',
                     'ratio' => 1800 / 800,
                 ],
-            ],
-            'mobile' => [
                 [
-                    'name' => 'landscape',
+                    'name' => 'mobile',
                     'ratio' => 800 / 600,
                 ],
             ],

@@ -30,8 +30,8 @@
     @isset($bike)
     <div id="bike-navigation">
         <div class="container-fluid">
-            <div class="row px-3 py-2">
-                <div id="bike-navigation-left" class="mr-auto">
+            <div class="row">
+                <div id="bike-navigation-left" class="mr-auto px-3 py-2">
                     <span class="gitane-logo">G</span>
                     <span class="name">{{ $bike->name}} {{ $bike->subname }}</span>
                     <span class="d-none d-lg-inline">
@@ -50,6 +50,9 @@
                     @endif
                     <a href="#product-related" class="badge badge-pill bike-nav-item">@lang('bike.related.plural')</a>
                 </span>
+                </div>
+                <div id="bike-navigation-right" class="ml-auto">
+                    <a href="{{ route('site.stores', ['locale' => app()->getLocale()]) }}" class="buy-button">@lang('common.buy_this_bike')</a>
                 </div>
             </div>
         </div>

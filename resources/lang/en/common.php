@@ -32,4 +32,5 @@ return [
     'contact_us' => 'Contact Us',
     'cycleurope_portal' => 'Cycleurope France Portal',
     'tandem_cycleurope' => 'Tandem Cycleurope B2B',
+    'buy_this_bike' => 'Buy This Bike',
 ];

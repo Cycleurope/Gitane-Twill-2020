@@ -32,4 +32,5 @@ return [
     'contact_us' => 'Contactez-nous',
     'cycleurope_portal' => 'Portail Cycleurope France',
     'tandem_cycleurope' => 'B2B Tandem Cycleurope',
+    'buy_this_bike' => 'Acheter ce vélo',
 ];

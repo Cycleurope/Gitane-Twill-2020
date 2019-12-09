@@ -45,13 +45,13 @@ class Page extends Model
         'cover' => [
             'desktop' => [
                 [
-                    'name' => 'default',
+                    'name' => 'desktop',
                     'ratio' => 1800 / 540,
                 ],
             ],
             'tablet' => [
                 [
-                    'name' => 'default',
+                    'name' => 'tablet',
                     'ratio' => 1800 / 660,
                 ],
             ],

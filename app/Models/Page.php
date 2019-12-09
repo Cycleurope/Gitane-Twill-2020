@@ -14,9 +14,6 @@ class Page extends Model
 
     protected $fillable = [
         'published',
-        'desktop_cover',
-        'tablet_cover',
-        'mobile_cover',
         'title',
         'description',
         'position',

@@ -49,12 +49,6 @@ class Page extends Model
                     'ratio' => 1800 / 540,
                 ],
             ],
-            'tablet' => [
-                [
-                    'name' => 'tablet',
-                    'ratio' => 1800 / 660,
-                ],
-            ],
         ],
     ];
 }

@@ -8,7 +8,7 @@
     <div class="row">
         @if($page->hasImage('desktop_cover'))
         <div class="col px-0">
-            <img src="{{ $page->image('desktop_cover') }}" alt="" width="100%">
+            <img src="{{ $page->image('cover') }}" alt="" width="100%">
         </div>
         @endif
     </div>

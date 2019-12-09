@@ -7,7 +7,7 @@
         <div class="col-12">
             <h2 class="text-uppercase">@lang('bike.geometry.plural')</h2>
         </div>
-        <div class="col-12 col-lg-6" style="background-color:#111114;">
+        <div class="col-12 col-lg-6" style="background-color:#111114 !important;">
             <img src="{{ $bike->geometries->first()->image('picture', 'default', ['w' => 1200]) }}" alt="">
         </div>
         <div class="col-12 col-lg-6">

@@ -15,6 +15,6 @@ class PageRepository extends ModuleRepository
 
     public function __construct(Page $model)
     {
-        $this->model = $model  ;
+        $this->model = $model;
     }
 }

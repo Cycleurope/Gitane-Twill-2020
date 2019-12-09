@@ -8,20 +8,10 @@
 @section('contentFields')
 
     @formField('medias', [
-        'name' => 'desktop_cover',
-        'label' => 'Couverture Desktop',
+        'name' => 'cover',
+        'label' => 'Couverture',
     ])
-
-    @formField('medias', [
-        'name' => 'tablet_cover',
-        'label' => 'Couverture Tablette',
-    ])
-
-    @formField('medias', [
-        'name' => 'mobile_cover',
-        'label' => 'Couverture Mobile',
-    ])
-
+    
     @formField('input', [
         'name' => 'description',
         'label' => 'Description',

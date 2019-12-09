@@ -6,7 +6,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        @if($page->hasImage('desktop_cover'))
+        @if($page->hasImage('cover'))
         <div class="col px-0">
             <img src="{{ $page->image('cover') }}" alt="" width="100%">
         </div>

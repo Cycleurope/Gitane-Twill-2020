@@ -43,27 +43,23 @@ class Family extends Model implements Sortable
 
     // uncomment and modify this as needed if you use the HasMedias trait
     public $mediasParams = [
-        'desktop_cover' => [
-            'default' => [
+        'cover' => [
+            'desktop' => [
                 [
                     'name' => 'landscape',
                     'ratio' => 1800 / 540,
                 ],
             ],
-        ],
-        'tablet_cover' => [
-            'default' => [
+            'tablet' => [
                 [
-                    'name' => 'landscape',
-                    'ratio' => 1200 / 600,
+                    'name' => 'tablet',
+                    'ratio' => 1800 / 900,
                 ],
             ],
-        ],
-        'mobile_cover' => [
-            'default' => [
+            'mobile' => [
                 [
-                    'name' => 'landscape',
-                    'ratio' => 900 / 600,
+                    'name' => 'mobile',
+                    'ratio' => 800 / 540,
                 ],
             ],
         ],

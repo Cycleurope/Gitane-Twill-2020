@@ -11,7 +11,11 @@
             <img src="{{ $bike->geometries->first()->image('picture', 'default', ['w' => 1200]) }}" alt="" style="background:#111114 !important;">
         </div>
         <div class="col-12 col-lg-6">
+            @if($bike->geometries->first()->geometry_type == "tandem")
+            @include('site.partials.geometries.table-tandem')
+            @else
             @include('site.partials.geometries.table')
+            @endif
         </div>
     </div>
 </section>

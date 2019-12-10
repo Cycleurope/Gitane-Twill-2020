@@ -11,8 +11,8 @@
     ])
 
 @formField('medias', [
-    'name' => 'desktop_cover',
-    'label' => 'Couverture Desktop',
+    'name' => 'cover',
+    'label' => 'Couverture',
 ])
 
 @formField('medias', [

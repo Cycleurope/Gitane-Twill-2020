@@ -43,19 +43,15 @@ class Page extends Model
             'default' => [
                 [
                     'name' => 'default',
-                    'ratio' => 16/9
+                    'ratio' => 1800/540
                 ],
             ],
             'mobile' => [
                 [
                     'name' => 'landscape',
-                    'ratio' => 16 / 9,
+                    'ratio' => 800 / 500,
                 ],
-                [
-                    'name' => 'portrait',
-                    'ratio' => 3 / 4,
-                ],
-            ],
+            ]
         ],
     ];
 }

@@ -46,7 +46,7 @@ class Family extends Model implements Sortable
         'cover' => [
             'desktop' => [
                 [
-                    'name' => 'landscape',
+                    'name' => 'desktop',
                     'ratio' => 1800 / 540,
                 ],
             ],

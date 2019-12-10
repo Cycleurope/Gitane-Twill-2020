@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>Gitane dans le monde entier...</h2>
+                <h3>Gitane dans le monde entier...</h3>
             </div>
         </div>
     </div>

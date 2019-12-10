@@ -46,19 +46,19 @@ class Family extends Model implements Sortable
         'cover' => [
             'desktop' => [
                 [
-                    'name' => 'default',
+                    'name' => 'desktop',
                     'ratio' => 1800 / 540,
                 ],
             ],
             'tablet' => [
                 [
-                    'name' => 'default',
+                    'name' => 'tablet',
                     'ratio' => 1800 / 900,
                 ],
             ],
             'mobile' => [
                 [
-                    'name' => 'default',
+                    'name' => 'mobile',
                     'ratio' => 800 / 540,
                 ],
             ],

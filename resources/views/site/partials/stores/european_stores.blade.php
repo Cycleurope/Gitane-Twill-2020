@@ -10,8 +10,12 @@
         <h4><span class="flag-icon flag-icon-{{ $store->countries()->first()->alpha2 }}"></span> {{ $store->shopname }}</h4>
             {{ $store->address1 }}
             <br>{{ $store->postalcode }} {{ $store->city }}
+            @if($store->phone != '')
             <br /><i class="fas fa-phone"></i> {{ $store->phone }}
+            @endif
+            @if($store->email != '')
             <br /><i class="fas fa-paper-plane"></i> {{ $store->email }}
+            @endif
         </div>
         @endforeach
         </div>

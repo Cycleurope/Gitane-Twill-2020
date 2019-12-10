@@ -11,13 +11,6 @@
         'label' => 'Photo',
     ])
 
-    @formField('browser' , [
-        'moduleName' => 'countries',
-        'name' => 'countries',
-        'label' => 'Pays',
-        'max' => 1
-    ])
-
     @formField('input', [
         'name' => 'code',
         'label' => 'Code Client',

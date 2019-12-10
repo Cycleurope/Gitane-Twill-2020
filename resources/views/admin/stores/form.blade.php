@@ -11,12 +11,19 @@
         'label' => 'Photo',
     ])
 
-@formField('input', [
-    'name' => 'code',
-    'label' => 'Code Client',
-    'translated' => false,
-    'maxlength' => 100
-])
+    @formField('browser' , [
+        'moduleName' => 'countries',
+        'name' => 'countries',
+        'label' => 'Pays',
+        'max' => 1
+    ])
+
+    @formField('input', [
+        'name' => 'code',
+        'label' => 'Code Client',
+        'translated' => false,
+        'maxlength' => 100
+    ])
 
     @formField('input', [
         'name' => 'shopname',

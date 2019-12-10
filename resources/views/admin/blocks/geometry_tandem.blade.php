@@ -6,14 +6,26 @@
 ])
 @formField('input', [
     'translated' => false,
-    'name' => 'a',
-    'label' => 'A',
+    'name' => 'a1',
+    'label' => 'A1',
     'required' => false
 ])
 @formField('input', [
     'translated' => false,
-    'name' => 'b',
-    'label' => 'B',
+    'name' => 'a2',
+    'label' => 'A2',
+    'required' => false
+])
+@formField('input', [
+    'translated' => false,
+    'name' => 'b1',
+    'label' => 'B1',
+    'required' => false
+])
+@formField('input', [
+    'translated' => false,
+    'name' => 'b2',
+    'label' => 'B2',
     'required' => false
 ])
 @formField('input', [
@@ -42,12 +54,6 @@
 ])
 @formField('input', [
     'translated' => false,
-    'name' => 'g',
-    'label' => 'G',
-    'required' => false
-])
-@formField('input', [
-    'translated' => false,
     'name' => 'h',
     'label' => 'H',
     'required' => false
@@ -62,17 +68,5 @@
     'translated' => false,
     'name' => 'J',
     'label' => 'J',
-    'required' => false
-])
-@formField('input', [
-    'translated' => false,
-    'name' => 'wheels',
-    'label' => 'Wheels',
-    'required' => false
-])
-@formField('input', [
-    'translated' => false,
-    'name' => 'height',
-    'label' => 'Hauteur (cm)',
     'required' => false
 ])

@@ -14,11 +14,11 @@
 
 
 @formField('medias', [
+
     'name' => 'mobile_picture',
     'label' => 'Image FullWidth (Mobile)',
     'note' => 'Largeur minimal de l\'image : 1200px',
 ])
-
 
 @formField('input', [
     'translated' => true,

@@ -11,7 +11,9 @@ class CreateGeometriesTables extends Migration
             
             createDefaultTableFields($table);
             $table->string('title', 200)->nullable();
-        })  ;
+            $table->string('geometry_type', 200)->nullable();
+            
+        });
 
     }
 

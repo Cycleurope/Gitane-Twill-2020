@@ -12,6 +12,7 @@ class Geometry extends Model
 
     protected $fillable = [
         'published',
+        'geometry_type',
         'title' ,
     ]  ;
 

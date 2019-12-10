@@ -32,6 +32,9 @@ class AppServiceProvider extends ServiceProvider
             'stores' => 'App\Models\Store'
         ]);
         Relation::morphMap([
+            'countries' => 'App\Models\Country'
+        ]);
+        Relation::morphMap([
             'families' => 'App\Models\Family' 
         ]);
         Relation::morphMap([

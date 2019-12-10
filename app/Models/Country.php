@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models  ;
+namespace App\Models;
 
-use A17\Twill\Models\Model  ;
+use A17\Twill\Models\Model;
 
 class Country extends Model 
 {

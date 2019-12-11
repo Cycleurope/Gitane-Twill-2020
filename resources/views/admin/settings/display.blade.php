@@ -6,16 +6,19 @@
 ])
 
 @section('contentFields')
-
-@endsection
-
-@section('fieldsets')
-<a17-fieldset title="Distributeurs" id="stores" :open="true">
-
-    @formField('checkbox', [
-        'label' => 'Afficher les distributeurs dans le monde.',
-        'name' => 'display_global_stores',
+    @formField('input', [
+        'label' => 'Afficher les prix publics',
+        'name' => 'public_prices',
+        'textLimit' => '3',
+        'note' => 'oui / non'
     ])
 
-</a17-fieldset>
+    @formField('input', [
+        'label' => 'Afficher les distributeurs internationaux',
+        'name' => 'display_global_stores',
+        'textLimit' => '3',
+        'note' => 'oui / non'
+    ])
+
+
 @endsection

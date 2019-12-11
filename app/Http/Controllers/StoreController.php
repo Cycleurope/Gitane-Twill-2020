@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use A17\Twill\Repositories\SettingRepository;
 use Illuminate\Http\Request;
 use App\Models\Store;
 use App\Models\Department;
@@ -11,6 +11,7 @@ class StoreController extends Controller
 
     public function index()
     {
+        $display_global_stores      = self::displayGlobalStores();
         $departments                = Department:: all();
         $stores                     = Store::all();
         $europeanStores             = self::getEuropeanStores();
@@ -28,7 +29,15 @@ class StoreController extends Controller
             'asian_stores'          => $asianStores,
             'oceanian_stores'       => $oceanianStores,
             'departments'           => $departments,
-            ]);
+            'display_global_stores' => $display_global_stores
+        ]);
+    }
+
+    public function displayGlobalStores() {
+        $display = app(SettingRepository::class)->byKey('display_global_stores', 'display');
+        if($display == "oui" || $display == "yes") {
+            return true;
+        } else return false;
     }
 
     public function getStoresForDepartment($department)

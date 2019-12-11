@@ -6,21 +6,7 @@
 ])
 
 @section('contentFields')
-@formField('select', [
-    'name' => 'display_prices',
-    'label' => 'Affichage des tarifs publics',
-    'placeholder' => ' les prix publics sur le site ?',
-    'options' => [
-        [
-            'value' => 'no',
-            'label' => 'Non'
-        ],
-        [
-            'value' => 'yes',
-            'label' => 'Oui'
-        ],
-    ]
-])
+
 @endsection
 
 @section('fieldsets')

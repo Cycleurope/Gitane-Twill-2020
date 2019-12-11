@@ -11,7 +11,7 @@
         <a href="{{ route('site.families.show', ['locale' => app()->getLocale(), 'slug' => $f->getSlug()]) }}">
             <div class="family-tile">
                 @if($f->hasImage('tile'))
-                <img src="{{ $f->image('tile', 'default') }}" alt="">
+                <img src="{{ $f->image('tile', 'default', ['w'] => 600) }}" alt="">
                 @else
                 @endif
                 <div class="overlay overlay-default"></div>

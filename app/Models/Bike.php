@@ -143,7 +143,9 @@ class Bike extends Model implements Sortable
             $c = ",";
         }
         $pp = $this->public_price;
-        if($pp < 100) {
+        if($pp == 0) {
+            $friendlyPublicPrice = "";
+        } else if($pp < 100) {
             $friendlyPublicPrice = substr($pp, 0, 2).$c."<span class='cents'>".substr($pp, 4, 2)."</span> €";
         } else if($pp < 1000) {
             $friendlyPublicPrice = substr($pp, 0, 3).$c."<span class='cents'>".substr($pp, 4, 2)."</span> €";

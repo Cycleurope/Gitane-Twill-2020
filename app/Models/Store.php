@@ -90,4 +90,9 @@ class Store extends Model implements Sortable
     {
         return $this->belongsToMany(Country::class);
     }
+
+    public function getCountrySelectedAttribute($value)
+    {
+        return $this->countries->implode('title', ', ');
+    }
 }

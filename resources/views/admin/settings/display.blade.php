@@ -27,9 +27,11 @@
 @section('fieldsets')
 <a17-fieldset title="Distributeurs" id="stores" :open="true">
 
-    @formField('checkbox' , [
-        'name' => 'display_global' ,
-        'label' => 'Afficher les distributeurs dans le monde.'
+    @formField('input', [
+        'label' => 'Mots-cleeeeeés',
+        'name' => 'websifffffte_keywords',
+        'textLimit' => '255',
+        'translated' => true
     ])
 
 </a17-fieldset>

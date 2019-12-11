@@ -18,6 +18,9 @@
                     @include('layouts.footer.footermenu')
                     @include('layouts.footer.pagesmenu')
                     @include('layouts.footer.socialnetworks')
+                    @if(true)
+                    <a href="#">Télécharger le catalogue Gitane 2020</a>
+                    @endif
                 </div>
             </section>
             <section>

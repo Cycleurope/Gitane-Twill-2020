@@ -10,7 +10,6 @@
     'name' => 'display_prices',
     'label' => 'Affichage des tarifs publics',
     'placeholder' => ' les prix publics sur le site ?',
-    'default' => 'no',
     'options' => [
         [
             'value' => 'no',
@@ -27,11 +26,9 @@
 @section('fieldsets')
 <a17-fieldset title="Distributeurs" id="stores" :open="true">
 
-    @formField('input', [
-        'label' => 'Mots-cleeeeeés',
-        'name' => 'websifffffte_keywords',
-        'textLimit' => '255',
-        'translated' => true
+    @formField('checkbox', [
+        'label' => 'Afficher les distributeurs dans le monde.',
+        'name' => 'display_global_stores',
     ])
 
 </a17-fieldset>

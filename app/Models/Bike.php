@@ -267,4 +267,14 @@ class Bike extends Model implements Sortable
     {
         return $this->belongsToMany(Certificate::class);
     }
+
+    public function getFamiliesSelectedAttribute($value)
+    {
+        return $this->families->implode('title', ', ');
+    }
+
+    public function getSizesSelectedAttribute($value)
+    {
+        return $this->sizes->implode('title', ', ');
+    }
 }

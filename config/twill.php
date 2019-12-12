@@ -113,7 +113,7 @@ return [
                 'create' => true ,
                 'activity' => true ,
                 'search' => true ,
-                'search_fields' => ['name'] ,
+                'search_fields' => ['title', 'shopname'] ,
             ]
         ]
     ] ,

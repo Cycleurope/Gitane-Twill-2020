@@ -23,10 +23,12 @@ class ComposerServiceProvider extends ServiceProvider {
             $website_prefix = app(SettingRepository::class)->byKey('website_prefix', 'seo');
             $website_description = app(SettingRepository::class)->byKey('website_description', 'seo');
             $website_keywords = app(SettingRepository::class)->byKey('website_keywords', 'seo');
+            $display_global_stores = app(SettingRepository::class)->byKey('display_global_stores', 'display');
             $view->with([
                 'website_prefix' => $website_prefix,
                 'website_description' => $website_description,
-                'website_keywords' => $website_keywords
+                'website_keywords' => $website_keywords,
+                'display_global_stores' => $display_global_stores
             ]);
         });
         View::composer('layouts.frontmenu' , function( $view )

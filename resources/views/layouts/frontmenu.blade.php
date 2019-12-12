@@ -58,7 +58,7 @@
         </div>
     </div>
     @endif
-    @isset($stores)
+    @isset($stores && $display_global_stores)
     <div id="stores-navigation">
         <div class="container-fluid">
             <div class="row px-3 py-2">

@@ -28,7 +28,7 @@
             <section>
                 <div class="row py-4">
                     <div class="col-12">
-                        <a href="mailto:contact@gitane.fr"><i class="fas fa-paper-plane mr-1"></i>&nbsp;@lang('common.contact_us')</a>
+                        <a href="mailto:contact@cycles-gitane.fr"><i class="fas fa-paper-plane mr-1"></i>&nbsp;@lang('common.contact_us')</a>
                          • <a href="http://www.cycleurope.fr"><i class="fas fa-bicycle mr-1"></i>&nbsp;@lang('common.cycleurope_portal')</a>
                          • <a href="http://www.tandem-cycleurope.fr"><i class="fas fa-shopping-cart mr-1"></i>&nbsp;@lang('common.tandem_cycleurope')</a></div>
                 </div>

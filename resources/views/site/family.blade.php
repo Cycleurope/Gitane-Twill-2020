@@ -1,12 +1,15 @@
 @extends('layouts.app')
 
 @section('pageTitle', " - ".$family->translate(app()->getLocale())->title)
+@endsection
 
 @if($family->translate(app()->getLocale())->meta_description != '')
     @section('metaDescription', $family->translate(app()->getLocale())->meta_description)
+    @endsection
 @endif
 @if($family->translate(app()->getLocale())->meta_keywords != '')
     @section('metaKeywords', $family->translate(app()->getLocale())->meta_keywords)
+    @endsection
 @endif
 
 @section('content')

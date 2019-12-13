@@ -11,5 +11,6 @@ class FamilyTranslation extends Model
         'description',
         'active',
         'locale',
+        'meta_description', 'meta_keywords',
     ];
 }

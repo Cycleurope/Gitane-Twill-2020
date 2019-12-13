@@ -18,5 +18,6 @@ class BikeTranslation extends Model
         'mudguards', 'racks', 'chainguard', 'stand', 'lightings', 'transmission', 'plus',
         'active', 'pedals', 'transmission', 'plus',
         'locale',
+        'meta_description', 'meta_keywords',
     ];
 }

@@ -25,6 +25,7 @@ class Page extends Model
         'description',
         'active',
         'content',
+        'meta_description', 'meta_keywords',
     ];
     
     // uncomment and modify this as needed if you use the HasSlug trait

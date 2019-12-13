@@ -34,6 +34,7 @@ class Bike extends Model implements Sortable
         'saddle' , 'seatpost' , 'handlebars' , 'stem' , 'brakes' ,
         'mudguards' , 'racks' , 'chainguard' , 'stand' , 'lightings' , 'active',
         'pedals', 'transmission', 'plus',
+        'meta_description', 'meta_keywords',
     ]  ;
     
     public $slugAttributes = [

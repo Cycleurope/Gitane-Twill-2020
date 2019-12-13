@@ -12,5 +12,6 @@ class PageTranslation extends Model
         'active',
         'locale',
         'content',
+        'meta_description', 'meta_keywords',
     ];
 }

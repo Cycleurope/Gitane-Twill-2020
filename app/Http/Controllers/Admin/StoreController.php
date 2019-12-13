@@ -20,6 +20,10 @@ class StoreController extends ModuleController
         'country_selected' => [
             'title' => 'Country',
             'field' => 'country_selected'
+        ],
+        'geolocated'=> [
+            'title' => 'Geolocation',
+            'field' => 'is_geolocated'
         ]
     ];
 }

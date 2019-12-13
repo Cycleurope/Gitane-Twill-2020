@@ -2,6 +2,14 @@
 
 @section('pageTitle', " - ".$page->translate(app()->getLocale())->title )
 
+
+@if($page->translate(app()->getLocale())->meta_description != '')
+    @section('metaDescription', $page->translate(app()->getLocale())->meta_description)
+@endif
+@if($page->translate(app()->getLocale())->meta_keywords != '')
+    @section('metaKeywords', $page->translate(app()->getLocale())->meta_keywords)
+@endif
+
 @section('content')
 
 <div class="container-fluid">

@@ -5,6 +5,7 @@
 
 @if($family->translate(app()->getLocale())->meta_description != '')
     @section('metaDescription', $family->translate(app()->getLocale())->meta_description)
+    òulalala
     @endsection
 @endif
 @if($family->translate(app()->getLocale())->meta_keywords != '')

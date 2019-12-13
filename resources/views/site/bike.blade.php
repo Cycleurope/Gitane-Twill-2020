@@ -19,5 +19,6 @@
 @include('site.partials.bike.accessories')
 @include('site.partials.bike.related-products')
 @include('site.partials.find-a-dealer')
+
 </div>
 @endsection

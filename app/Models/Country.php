@@ -37,8 +37,8 @@ class Country extends Model
         'published'
     ];
 
-    public function bikes()
+    public function stores()
     {
-        return $this->belongsToMany(Bike::class);
+        return $this->belongsToMany(Store::class);
     }
 }

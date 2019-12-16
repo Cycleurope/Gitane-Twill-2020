@@ -20,6 +20,8 @@
 </div>
 
 @include('site.partials.stores.french_stores')
-@include('site.partials.stores.international')
+@if($display_global_stores)
+    @include('site.partials.stores.international')
+@endif
 
 @endsection

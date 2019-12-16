@@ -29,6 +29,7 @@ class Family extends Model implements Sortable
         'title',
         'description',
         'active',
+        'meta_description', 'meta_keywords',
     ];
     
     // uncomment and modify this as needed if you use the HasSlug trait

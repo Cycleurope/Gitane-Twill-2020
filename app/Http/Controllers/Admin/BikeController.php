@@ -8,8 +8,19 @@ class BikeController extends ModuleController
 {
     protected $moduleName = 'bikes';
 
-    protected $indexOptions = [
-        'reorder' => true,
-    ];
 
+    protected $indexColumns = [
+        'title' => [
+            'title' => 'Title',
+            'field' => 'title',
+        ],
+        'families_selected' => [
+            'title' => 'Famille',
+            'field' => 'families_selected'
+        ],
+        'sizes_selected' => [
+            'title' => 'Tailles',
+            'field' => 'sizes_selected'
+        ]
+    ];
 }

@@ -1,5 +1,6 @@
 @extends('twill::layouts.form', [
     'additionalFieldsets' => [
+        ['fieldset' => 'seo' , 'label' => 'SEO'] ,
         ['fieldset' => 'frameset', 'label' => 'Cadre'],
         ['fieldset' => 'electric', 'label' => 'e-Specs'],
         ['fieldset' => 'transmission' , 'label' => 'Transmission'],
@@ -402,6 +403,24 @@
             'label' => 'Accessoires' ,
             'max' => 10
         ])
+    </a17-fieldset>
+
+    <a17-fieldset title="SEO" id="seo" :open="false">
+
+        @formField('input', [
+            'name' => 'meta_description',
+            'routePrefix' => 'book',
+            'label' => 'Meta Description',
+            'translated' => true,
+            'type' => 'textarea',
+            'maxlength' => 100
+        ])
+        @formField('input', [
+            'label' => 'Meta Keywords',
+            'name' => 'meta_keywords',
+            'translated' => true,
+        ])
+    
     </a17-fieldset>
 
 @endsection

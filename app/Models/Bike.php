@@ -40,6 +40,7 @@ class Bike extends Model implements Sortable
         'saddle' , 'seatpost' , 'handlebars' , 'stem' , 'brakes' ,
         'mudguards' , 'racks' , 'chainguard' , 'stand' , 'lightings' , 'active',
         'pedals', 'transmission', 'plus',
+        'meta_description', 'meta_keywords',
     ]  ;
     
     public $slugAttributes = [
@@ -149,7 +150,9 @@ class Bike extends Model implements Sortable
             $c = ",";
         }
         $pp = $this->public_price;
-        if($pp < 100) {
+        if($pp == 0) {
+            $friendlyPublicPrice = "";
+        } else if($pp < 100) {
             $friendlyPublicPrice = substr($pp, 0, 2).$c."<span class='cents'>".substr($pp, 4, 2)."</span> €";
         } else if($pp < 1000) {
             $friendlyPublicPrice = substr($pp, 0, 3).$c."<span class='cents'>".substr($pp, 4, 2)."</span> €";
@@ -270,5 +273,15 @@ class Bike extends Model implements Sortable
     public function certificates()
     {
         return $this->belongsToMany(Certificate::class);
+    }
+
+    public function getFamiliesSelectedAttribute($value)
+    {
+        return $this->families->implode('title', ', ');
+    }
+
+    public function getSizesSelectedAttribute($value)
+    {
+        return $this->sizes->implode('title', ', ');
     }
 }

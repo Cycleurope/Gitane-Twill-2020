@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="{{ $website_description }}">
-    <meta name="keywords" content="{{ $website_keywords }}">
+    <meta name="description" content="@yield('metaDescription', $website_description)">
+    <meta name="keywords" content="@yield('metaKeywords', $website_keywords)">
     <title>{{ $website_prefix }}@yield('pageTitle')</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/jtc2ito.css">

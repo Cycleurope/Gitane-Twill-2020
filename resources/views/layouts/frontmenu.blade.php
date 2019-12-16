@@ -59,6 +59,7 @@
     </div>
     @endif
     @isset($stores)
+    @if($display_global_stores)
     <div id="stores-navigation">
         <div class="container-fluid">
             <div class="row px-3 py-2">
@@ -84,6 +85,7 @@
             </div>
         </div>
     </div>
+    @endif
     @endif
 
 </header> 

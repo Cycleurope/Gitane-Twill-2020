@@ -15,6 +15,8 @@ class Bike extends Model implements Sortable
 {
     use HasBlocks, HasTranslation, HasSlug, HasMedias, HasFiles, HasPosition;
 
+    protected $perPage = 10;
+
     protected $fillable = [
         'published',
         'title', 'weight' ,
@@ -22,6 +24,10 @@ class Bike extends Model implements Sortable
         'position', 'datasheet_theme', 'geometries_theme',
         'price_from', 'public_price', 'datasheet_theme', 'geometries_theme',
     ]  ;
+
+    protected $indexOptions = [
+        'reorder' => true,
+    ];
 
     public $translatedAttributes = [
         'title',

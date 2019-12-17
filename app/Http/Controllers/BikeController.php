@@ -12,6 +12,7 @@ class BikeController extends Controller
     public function show($slug)
     {
         $bike = Bike::forSlug($slug)->first();
+        $bike_slugs = $bike->slugs;
         $bike = app(BikeRepository::class)->forSlug($slug);
         $family_id = $bike->families()->first()->id;
         $family = Family::find($family_id);
@@ -19,7 +20,8 @@ class BikeController extends Controller
         return view('site.bike', [
             'bike' => $bike,
             'related_bikes' => $related_bikes,
-            'family' => $family
+            'family' => $family,
+            'bike_slugs' => $bike_slugs,
         ]);
     }
 }

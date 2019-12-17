@@ -13,6 +13,7 @@
                 @include('site.partials.bike.overview.block_description')
                 @include('site.partials.bike.overview.block_colors')
                 @include('site.partials.bike.overview.block_sizes')
+                @include('site.partials.bike.overview.block_certificate')
             </div>
         </div>
     </div>

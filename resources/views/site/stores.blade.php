@@ -11,6 +11,10 @@
     </div>
 </div>
 
+<div id="map" style="height: 600px">
+
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col py-5">
@@ -23,5 +27,8 @@
 @if($display_global_stores)
     @include('site.partials.stores.international')
 @endif
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.css' rel='stylesheet' />
 
 @endsection

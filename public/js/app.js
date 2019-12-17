@@ -1,4 +1,57 @@
 $(document).ready(function() {
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY3ljbGV1cm9wZSIsImEiOiJjazM1eWRtdHIxNDB0M2NtcXhzdWlhM3A4In0.lEz4u41ef6BjjWPcr-4eHg';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [3.69812, 48.5212],
+        zoom: 9
+    });
+
+    var geoJSON =  {
+        type: 'FeaturesCollection',
+        features: [{
+            type: 'Store',
+            geometry: {
+                type: 'Point',
+                coordinates: [3.69812, 48.5212]
+            },
+            properties: {
+                title: 'CYCLEUROPE INDUSTRIES S.A.S.',
+                description: '161, rue Gabriel Péri<br />10104 Romilly-sur-Seine<hr />Tel : 03.25.39.39.39'
+            }
+        },
+        {
+            type: 'Store',
+            geometry: {
+                type: 'Point',
+                coordinates: [4.07554, 48.2979]
+            },
+            properties: {
+                title: 'LES CYCLES TROYENS  / Velo & Oxygen Troyes',
+                description: 'Rue Georges Clémenceau<br />10000 Troyes<hr />Tel : 03.25.39.39.39'
+            }
+        }]
+    }
+
+    var storesJSON = {};
+    var stores = {};
+
+    geoJSON.features.forEach(function(marker) {
+
+        // create a HTML element for each feature
+        var el = document.createElement('div');
+        el.className = 'marker';
+      
+        // make a marker for each feature and add to the map
+        new mapboxgl.Marker(el)
+          .setLngLat(marker.geometry.coordinates)
+          .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+          .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+          .addTo(map);
+
+      });
+
+
     var scroll = new SmoothScroll('a[href*="#"]',{
         header: '[data-scroll-header]',
         speed: 300
@@ -121,9 +174,50 @@ $(document).ready(function() {
                         `+br+store.postalcode+` `+store.city+`
                         <br /><i class="fas fa-phone"></i> `+store.phone+`
                         <br /><i class="fas fa-paper-plane"></i> `+store.email+`
+                        <br />LatLng `+store.latitude+'-'+store.longitude+`
                     </div>`;
                     $("#stores-list").append(store_item);
+                    if(store.latitude != null && store.longitude != null) {
+                        storeElement = {
+                            type: 'Store',
+                            geometry: {
+                                type: 'Point',
+                                coordinates: [store.longitude, store.latitude]
+                            },
+                            properties: {
+                                title: store.shopname,
+                                description: 'Rue Georges Clémenceau<br />10000 Troyes<hr />Tel : 03.25.39.39.39'
+                            }
+                        }
+                        stores.push(storeElement);
+                    }
+                    storesJSON = {
+                        storesCollection: [stores], 
+                    };
+                    storesJSON.storesCollection.forEach(function(marker) {
+
+                        // create a HTML element for each feature
+                        var el = document.createElement('div');
+                        el.className = 'marker';
+                      
+                        // make a marker for each feature and add to the map
+                        new mapboxgl.Marker(el)
+                          .setLngLat(marker.coordinates)
+                          .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                          .setHTML('<h3>nianiania</p>'))
+                          .addTo(map);
+                
+                      });
+
                 });
+            }
+        });
+        $.ajax({
+            url : '/geostores/'+d,
+            type : 'GET',
+            dataType : 'json',
+            success : function(data){
+                alert(data.length);
             }
         });
     });

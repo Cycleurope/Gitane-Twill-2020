@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="fr">
     @include('layouts.head')
+
+    <style>
+    .marker {
+  background-color: #1f2f79;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #00acee;
+}
+    .mapboxgl-popup {
+    max-width: 300px !important;
+    border-radius: 30px !important;
+    }
+
+    .mapboxgl-popup-content {
+    text-align: center;
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    font-family: 'Open Sans', sans-serif;
+    }
+</style>
   <body>
     @include('layouts.frontmenu')
     @yield('content')

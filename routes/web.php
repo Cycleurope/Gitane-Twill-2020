@@ -31,5 +31,6 @@ Route::get('/stores/africa' , 'StoreController@getAfricanStores')->name('site.st
 Route::get('/stores/asia' , 'StoreController@getAsianStores')->name('site.stores.asia');
 Route::get('/stores/oceania' , 'StoreController@getOceanianStores')->name('site.stores.oceania');
 Route::get('/stores/{dep}' , 'StoreController@getStoresForDepartment')->name('site.stores.fordepartment');
+Route::get('/geostores/{dep}' , 'StoreController@getGeolocatedStoresForDepartment')->name('site.geostores.fordepartment');
 Route::get('/certificates' , 'CertificateController@index')->name('site.certificates.index');
 

@@ -47,6 +47,13 @@ class StoreController extends Controller
         return response()->json($stores);
     }
 
+    public function getGeolocatedStoresForDepartment($department)
+    {
+        $dep = intval($department);
+        $stores = Store::where('dep', $dep)->where('latitude', '!=', NULL)->where('longitude', '!=', NULL)->get();
+        return response()->json($stores);
+    }
+
     public function getEuropeanStores()
     {
         $countriesArray = ["al","ad","at","az","by","be","ba","bg","hr","cy","cz","dk","ee","fi","ge","de","gr","hu","is","ie","it","kz","xk","lv","li","lt","lu","mk","mt","md","mc","me","nl","no","pl","pt","ro","ru","sm","rs","sk", "si","es","se","ch","tr","ua","gb","va"];

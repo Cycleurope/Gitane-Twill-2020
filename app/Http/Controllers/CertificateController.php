@@ -12,7 +12,8 @@ class CertificateController extends Controller
 
     public function index()
     {
-        $certs = Certificate::first()->file('cerfile',['en']);
+        $certs = Certificate::all();
+        dd($certs);
         return $certs;
     }
 }

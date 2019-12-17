@@ -5,7 +5,7 @@
         <ul class="colors-list">
             @foreach($bike->colors as $c)
             <li class="color-item col-10">
-                <span class="picto"><img src="{{ $c->image('color_picture', 'default', ['bg' => '2000']) }}" alt="" height="20"></span> {{ $c->translate(app()->getLocale())->color }}
+                <span class="picto"><img src="{{ $c->image('color_picture', 'default', ['bg' => '1000']) }}" alt="" height="20"></span> {{ $c->translate(app()->getLocale())->color }}
             </li>
             @endforeach
         </ul>

@@ -18,7 +18,7 @@
 @include('site.partials.geometries.section')
 @include('site.partials.bike.accessories')
 @include('site.partials.bike.related-products')
-@include('site.partials.find-a-dealer')
+@include('site.partials.find_a_dealer')
 
 </div>
 @endsection

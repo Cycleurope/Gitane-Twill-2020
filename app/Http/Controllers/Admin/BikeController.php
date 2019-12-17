@@ -8,6 +8,7 @@ class BikeController extends ModuleController
 {
     protected $moduleName = 'bikes';
 
+
     protected $indexColumns = [
         'title' => [
             'title' => 'Title',

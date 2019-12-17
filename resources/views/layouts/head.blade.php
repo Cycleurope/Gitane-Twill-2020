@@ -1,5 +1,6 @@
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="description" content="@yield('metaDescription', $website_description)">
     <meta name="keywords" content="@yield('metaKeywords', $website_keywords)">
     <title>{{ $website_prefix }}@yield('pageTitle')</title>

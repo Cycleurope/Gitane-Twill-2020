@@ -2,9 +2,9 @@
 <div id="home-slider" class="owl-carousel">
     @foreach($slides as $slide)
     <div class="slide-item">
-        <img src="//{{ $slide->image('mobile_slide', 'default') }}" alt="" class="d-block d-sm-none">
-        <img src="//{{ $slide->image('tablet_slide', 'default') }}" alt="" class="d-none d-sm-block d-md-none">
-        <img src="//{{ $slide->image('desktop_slide', 'default') }}" alt="" class="d-none d-md-block">
+        <img src="{{ $slide->image('mobile_slide', 'default') }}" alt="" class="d-block d-sm-none">
+        <img src="{{ $slide->image('tablet_slide', 'default') }}" alt="" class="d-none d-sm-block d-md-none">
+        <img src="{{ $slide->image('desktop_slide', 'default') }}" alt="" class="d-none d-md-block">
         <div class="overlay"></div>
         <div class="content">
             <div class="inner">

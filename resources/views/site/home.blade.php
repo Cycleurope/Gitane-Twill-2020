@@ -4,6 +4,6 @@
 
 @include('site.partials.home.homeslider')
 @include('site.partials.home.featured')
-
+@include('site.partials.stores.find_a_dealer')
 
 @endsection

@@ -43,8 +43,17 @@ class StoreController extends Controller
     public function getStoresForDepartment($department)
     {
         $dep = intval($department);
+        $department = Department::where('number', $dep)->first();
         $stores = Store::where('dep', $dep)->get();
-        return response()->json($stores);
+
+        $jsonData = ['department' => [
+            'id' => $department->id,
+            'number' => $department->number,
+            'latitude' => $department->latitude,
+            'longitude' => $department->longitude,
+            'mapzoom' => $department->mapzoom,
+        ], 'stores' => $stores];
+        return response()->json($jsonData);
     }
 
     public function getGeolocatedStoresForDepartment($department)

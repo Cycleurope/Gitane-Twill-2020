@@ -138,18 +138,27 @@ $(document).ready(function() {
     $("#departments-selector").change(function() {
         $('#no-store').hide();
         var d = $(this).find("option:selected").val();
-        console.log("Selected department : " + d);
         $("#stores-list").empty();
         $.ajax({
             url : '/stores/'+d,
             type : 'GET',
             dataType : 'json',
             success : function(data){
-                if(data.length == 0) {
+                if(data.department.latitude != null && data.department.longitude != null) {
+                    map.flyTo({
+                        center: [
+                            data.department.longitude,
+                            data.department.latitude
+                        ],
+                        zoom: data.department.mapzoom,
+                        essential: true // this animation is considered essential with respect to prefers-reduced-motion
+                    });
+                }
+                if(data.stores.length == 0) {
                     $('#no-store').show();
                     console.log("No store");
                 }
-                $.each(data, function(i, store){
+                $.each(data.stores, function(i, store){
                     if(store.address1 != '') {
                         address_line1 = store.address1;
                         br = "<br>";

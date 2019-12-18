@@ -19,30 +19,21 @@ $(document).ready(function() {
                 title: 'CYCLEUROPE INDUSTRIES S.A.S.',
                 description: '161, rue Gabriel Péri<br />10104 Romilly-sur-Seine<hr />Tel : 03.25.39.39.39'
             }
-        },
-        {
-            type: 'Store',
-            geometry: {
-                type: 'Point',
-                coordinates: [4.07554, 48.2979]
-            },
-            properties: {
-                title: 'LES CYCLES TROYENS  / Velo & Oxygen Troyes',
-                description: 'Rue Georges Clémenceau<br />10000 Troyes<hr />Tel : 03.25.39.39.39'
-            }
         }]
     }
 
-    var storesJSON = {};
-    var stores = {};
+    console.log(geoJSON);
+
+    var storesJSON = {
+        type: 'StoresCollection',
+        stores: []
+    };
 
     geoJSON.features.forEach(function(marker) {
 
-        // create a HTML element for each feature
         var el = document.createElement('div');
         el.className = 'marker';
       
-        // make a marker for each feature and add to the map
         new mapboxgl.Marker(el)
           .setLngLat(marker.geometry.coordinates)
           .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
@@ -177,8 +168,8 @@ $(document).ready(function() {
                         <br />LatLng `+store.latitude+'-'+store.longitude+`
                     </div>`;
                     $("#stores-list").append(store_item);
-                    if(store.latitude != null && store.longitude != null) {
-                        storeElement = {
+                    if(store.longitude != null & store.latitude != null) {
+                        item = {
                             type: 'Store',
                             geometry: {
                                 type: 'Point',
@@ -186,30 +177,25 @@ $(document).ready(function() {
                             },
                             properties: {
                                 title: store.shopname,
-                                description: 'Rue Georges Clémenceau<br />10000 Troyes<hr />Tel : 03.25.39.39.39'
+                                description: store.postalcode+' '+store.city+'<hr />Tel : 03.25.39.39.39'
                             }
                         }
-                        stores.push(storeElement);
+                        storesJSON.stores.push(item);
                     }
-                    storesJSON = {
-                        storesCollection: [stores], 
-                    };
-                    storesJSON.storesCollection.forEach(function(marker) {
-
-                        // create a HTML element for each feature
-                        var el = document.createElement('div');
-                        el.className = 'marker';
-                      
-                        // make a marker for each feature and add to the map
-                        new mapboxgl.Marker(el)
-                          .setLngLat(marker.coordinates)
-                          .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-                          .setHTML('<h3>nianiania</p>'))
-                          .addTo(map);
-                
-                      });
-
                 });
+                console.log(storesJSON);
+                storesJSON.stores.forEach(function(marker) {
+
+                    var el = document.createElement('div');
+                    el.className = 'marker';
+                  
+                    new mapboxgl.Marker(el)
+                      .setLngLat(marker.geometry.coordinates)
+                      .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                      .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+                      .addTo(map);
+            
+                  });
             }
         });
         $.ajax({
@@ -217,7 +203,6 @@ $(document).ready(function() {
             type : 'GET',
             dataType : 'json',
             success : function(data){
-                alert(data.length);
             }
         });
     });

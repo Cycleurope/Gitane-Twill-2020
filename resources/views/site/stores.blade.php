@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<div id="map" style="height: 600px">
+<div id="map" style="height: 800px">
 
 </div>
 

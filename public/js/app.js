@@ -4,6 +4,7 @@ $(document).ready(function() {
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [3.69812, 48.5212],
+        style: 'mapbox://styles/cycleurope/ck35yw6hf09dl1cpanzup9way',
         zoom: 9,
     });
 

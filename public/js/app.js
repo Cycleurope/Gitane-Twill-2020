@@ -8,6 +8,7 @@ $(document).ready(function() {
     });
 
     map.scrollZoom.disable();
+    map.addControl(new mapboxgl.NavigationControl());
 
     var geoJSON =  {
         type: 'FeaturesCollection',

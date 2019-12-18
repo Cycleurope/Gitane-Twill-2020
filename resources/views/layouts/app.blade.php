@@ -4,14 +4,23 @@
 
     <style>
     .marker {
-  background-color: #1f2f79;
-  background-size: cover;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 2px solid #00acee;
-}
+        background-color: #1f2f79;
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid #00acee;
+    }
+    .marker-velox {
+        background-color: #8dd821;
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid #111114;
+    }
     .mapboxgl-popup {
     max-width: 300px !important;
     border-radius: 30px !important;

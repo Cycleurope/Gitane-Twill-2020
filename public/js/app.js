@@ -178,12 +178,12 @@ $(document).ready(function() {
                         `+br+store.postalcode+` `+store.city+`
                         <br /><i class="fas fa-phone"></i> `+store.phone+`
                         <br /><i class="fas fa-paper-plane"></i> `+store.email+`
-                        <br />LatLng `+store.latitude+'-'+store.longitude+`
                     </div>`;
                     $("#stores-list").append(store_item);
                     if(store.longitude != null & store.latitude != null) {
                         item = {
                             type: 'Store',
+                            velox: store.velox,
                             geometry: {
                                 type: 'Point',
                                 coordinates: [store.longitude, store.latitude]
@@ -201,6 +201,9 @@ $(document).ready(function() {
 
                     var el = document.createElement('div');
                     el.className = 'marker';
+                    if(marker.velox == true) {
+                        el.className = 'marker-velox';
+                    }
                   
                     new mapboxgl.Marker(el)
                       .setLngLat(marker.geometry.coordinates)

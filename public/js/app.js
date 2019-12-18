@@ -4,8 +4,10 @@ $(document).ready(function() {
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
         center: [3.69812, 48.5212],
-        zoom: 9
+        zoom: 9,
     });
+
+    map.scrollZoom.disable();
 
     var geoJSON =  {
         type: 'FeaturesCollection',

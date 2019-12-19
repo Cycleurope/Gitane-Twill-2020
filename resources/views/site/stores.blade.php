@@ -11,10 +11,6 @@
     </div>
 </div>
 
-<div id="map" style="height: 800px">
-
-</div>
-
 <div class="container">
     <div class="row">
         <div class="col py-5">

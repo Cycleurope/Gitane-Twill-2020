@@ -162,24 +162,10 @@ $(document).ready(function() {
                     $('#no-store').show();
                     console.log("No store");
                 }
+                $("#dealers-list").empty();
+
                 $.each(data.stores, function(i, store){
-                    if(store.address1 != '') {
-                        address_line1 = store.address1;
-                        br = "<br>";
-                    }
-                    if(store.address2 != '') {
-                        address_line2 = "<br>"+store.address2;
-                        br = "<br>";
-                    }
-                    store_item = 
-                    `<div class="col-12 col-sm-6 col-lg-4 mb-5">
-                        <h4>`+store.shopname+`</h4>
-                        `+address_line1+address_line2+`
-                        `+br+store.postalcode+` `+store.city+`
-                        <br /><i class="fas fa-phone"></i> `+store.phone+`
-                        <br /><i class="fas fa-paper-plane"></i> `+store.email+`
-                    </div>`;
-                    $("#stores-list").append(store_item);
+                    $("#dealers-list").append(displayStoreBlock(store));
                     if(store.longitude != null & store.latitude != null) {
                         item = {
                             type: 'Store',
@@ -223,3 +209,38 @@ $(document).ready(function() {
         });
     });
 });
+
+function displayStoreBlock(store) {
+    var store = store;
+    store_name = store.shopname;
+    store_address1 = store.address1;
+    store_address2 = store.address2;
+    store_postalcode = store.postalcode;
+    store_phone = store.phone;
+    store_email = store.email;
+    is_velox = store.velox;
+    block_velox = '';
+    if(is_velox) {
+        block_velox = `<h3>VELO & OXYGEN</h3>`;
+    }
+
+    if(store_address1 != null || store_address1 != '') {
+        block_address1 = store_address1;
+    }
+    if(store_address2 != null || store_address2 != '') {
+        block_address2 = `<br />`+store_address2;
+    }
+
+    var tpl = 
+    `<div class="dealer-item px-4 py-5">
+        <h2>`+store_name+`</h2>
+        `+block_velox+`
+        `+store_address1+store_address2+`<br />`+store.postalcode+` `+store.city+`
+        <hr class="light">
+        <i class="fas fa-phone"></i> `+store.phone+`
+        <br /><i class="fas fa-paper-plane"></i> `+store.email+`
+        <br /><button class="btn btn-framed filled filled-dark">Localiser</button>
+    </div>`;
+
+    return tpl;
+}

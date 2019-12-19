@@ -1,9 +1,8 @@
 <section id="stores-france">
-    <div class="container">
-        <div class="row py-5">
-            <div class="col-12"><h2>France</h2></div>
-            <div class="col-12">
-                <h3>@lang('common.select_a_region')</h3>
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-12 col-lg-4">
+            <div>
                 <select name="departments-selector" id="departments-selector" class="form-control">
                     <option value="" disabled selected>@lang('common.select_a_region')</option>
                     @foreach($departments as $d)
@@ -11,12 +10,13 @@
                     @endforeach
                 </select>
             </div>
+            <div id="dealers-list">
+                <div class="alert alert-secondary">Sélectionnez une région ...</div>
+            </div>
         </div>
-
-        <div class="mb-5" id="no-store">
-            <h3 class="text-primary">Oups !</h3>
-            @lang('common.no_store_for_this_region')</div>
-        <div id="stores-list" class="row mb-5">    
+        <div id="map" class="col-8 d-none d-lg-block"></div>
+    </div>
 
     </div>
+
 </section>

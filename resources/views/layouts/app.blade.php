@@ -22,15 +22,17 @@
         border: 2px solid #111114;
     }
     .mapboxgl-popup {
-    max-width: 300px !important;
     border-radius: 30px !important;
     }
 
     .mapboxgl-popup-content {
     text-align: center;
+    width: 480px;
     border-radius: 10px !important;
     -webkit-border-radius: 10px !important;
-    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    font-size: 1.2em;
+    padding: 1em 1.5em !important;
     }
 </style>
   <body>

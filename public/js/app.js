@@ -1,56 +1,5 @@
 $(document).ready(function() {
-    mapboxgl.accessToken = 'pk.eyJ1IjoiY3ljbGV1cm9wZSIsImEiOiJjazM1eWRtdHIxNDB0M2NtcXhzdWlhM3A4In0.lEz4u41ef6BjjWPcr-4eHg';
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [3.69812, 48.5212],
-        style: 'mapbox://styles/cycleurope/ck35yw6hf09dl1cpanzup9way',
-        zoom: 9,
-    });
 
-    map.scrollZoom.disable();
-    map.addControl(new mapboxgl.NavigationControl());
-
-    var geoJSON =  {
-        type: 'FeaturesCollection',
-        features: [{
-            type: 'Store',
-            geometry: {
-                type: 'Point',
-                coordinates: [3.69812, 48.5212]
-            },
-            properties: {
-                title: 'CYCLEUROPE INDUSTRIES S.A.S.',
-                description: '161, rue Gabriel Péri<br />10104 Romilly-sur-Seine<hr />Tel : 03.25.39.39.39'
-            }
-        }]
-    }
-
-    console.log(geoJSON);
-
-    var storesJSON = {
-        type: 'StoresCollection',
-        stores: []
-    };
-
-    geoJSON.features.forEach(function(marker) {
-
-        var el = document.createElement('div');
-        el.className = 'marker';
-      
-        new mapboxgl.Marker(el)
-          .setLngLat(marker.geometry.coordinates)
-          .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-          .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
-          .addTo(map);
-
-      });
-
-
-    var scroll = new SmoothScroll('a[href*="#"]',{
-        header: '[data-scroll-header]',
-        speed: 300
-	});
     $('.navbar-toggler').click(function() {
         $(this).toggleClass('open');
     });
@@ -134,6 +83,59 @@ $(document).ready(function() {
         $(this).addClass('current-item');
     }); 
 
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY3ljbGV1cm9wZSIsImEiOiJjazM1eWRtdHIxNDB0M2NtcXhzdWlhM3A4In0.lEz4u41ef6BjjWPcr-4eHg';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [3.69812, 48.5212],
+        style: 'mapbox://styles/cycleurope/ck35yw6hf09dl1cpanzup9way',
+        zoom: 9,
+    });
+
+    map.scrollZoom.disable();
+    map.addControl(new mapboxgl.NavigationControl());
+
+    var geoJSON =  {
+        type: 'FeaturesCollection',
+        features: [{
+            type: 'Store',
+            geometry: {
+                type: 'Point',
+                coordinates: [3.69812, 48.5212]
+            },
+            properties: {
+                title: 'CYCLEUROPE INDUSTRIES S.A.S.',
+                description: '161, rue Gabriel Péri<br />10104 Romilly-sur-Seine<hr />Tel : 03.25.39.39.39'
+            }
+        }]
+    }
+
+    console.log(geoJSON);
+
+    var storesJSON = {
+        type: 'StoresCollection',
+        stores: []
+    };
+
+    geoJSON.features.forEach(function(marker) {
+
+        var el = document.createElement('div');
+        el.className = 'marker';
+      
+        new mapboxgl.Marker(el)
+          .setLngLat(marker.geometry.coordinates)
+          .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+          .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+          .addTo(map);
+
+      });
+
+
+    var scroll = new SmoothScroll('a[href*="#"]',{
+        header: '[data-scroll-header]',
+        speed: 300
+	});
+
     var store_item;
     var address_line1 = '';
     var address_line2 = '';
@@ -176,7 +178,13 @@ $(document).ready(function() {
                             },
                             properties: {
                                 title: store.shopname,
-                                description: store.postalcode+' '+store.city+'<hr />Tel : 03.25.39.39.39'
+                                isVelox: store.velox,
+                                address1: store.address1,
+                                address2: store.address2,
+                                postalcode: store.postalcode,
+                                city: store.city,
+                                phone: store.phone,
+                                email: store.email,
                             }
                         }
                         storesJSON.stores.push(item);
@@ -190,12 +198,46 @@ $(document).ready(function() {
                     if(marker.velox == true) {
                         el.className = 'marker-velox';
                     }
+
+                    block_velox = '';
+                    block_address = '';
+                    block_phone = '';
+                    block_email = '';
+
+                    if(marker.properties.isVelox) {
+                        block_velox = '<h4>Velo & Oxygen</h4>';
+                    }
+
+                    if(marker.properties.address2 != '') {
+                        block_address = marker.properties.address1 + '<br />' + marker.properties.address2 + '<br />' + marker.properties.postalcode + ' ' + marker.properties.city;
+                    } else {
+                        block_address = marker.properties.address1 + '<br />' + marker.properties.postalcode + ' ' + marker.properties.city;
+                    }
+
+                    if(marker.properties.phone != '') {
+                        block_phone = 'phone<li><i class="fas fa-phone"></i> ' + marker.properties.phone + '</li>';
+                    } else {
+                        block_phone = "Pas de phone";
+                    }
+                    
+                    if(marker.properties.email != '') {
+                        block_phone = '<li><i class="fas fa-paper-plane"></i> ' + marker.properties.email + '</li>';
+                    }
                   
+
                     new mapboxgl.Marker(el)
-                      .setLngLat(marker.geometry.coordinates)
-                      .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-                      .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
-                      .addTo(map);
+                        .setLngLat(marker.geometry.coordinates)
+                        .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                        .setHTML(
+                            `
+                            <h3>` + marker.properties.title + `</h3>
+                            ` + block_velox
+                            + block_address
+                            + block_phone + 'BLOCK_PHONE'
+                            + block_email +`
+                            `
+                        ))
+                        .addTo(map);
             
                   });
             }

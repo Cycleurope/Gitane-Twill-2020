@@ -115,6 +115,8 @@ class Bike extends Model implements Sortable
         ] ,
     ]  ;
 
+    public $filesParams = ['datasheet'];
+
     public function families()
     {
         return $this->belongsToMany(\App\Models\Family::class)  ;

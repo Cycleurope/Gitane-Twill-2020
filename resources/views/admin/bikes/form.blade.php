@@ -405,6 +405,14 @@
         ])
     </a17-fieldset>
 
+    <a17-fieldset title="Documents" id="documents" :open="true">
+        @formField('files', [
+            'name' => 'datasheet',
+            'label' => 'Fiche technique',
+            'note' => 'La fiche technique doit être au format PDF.'
+        ])
+    </a17-fieldset>
+
     <a17-fieldset title="SEO" id="seo" :open="false">
 
         @formField('input', [

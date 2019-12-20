@@ -15,6 +15,11 @@
                 </ul>
             </div>
         </div>
+        @if($bike->file('datasheet', app()->getLocale()) != '')
+        <div class="row">
+            <a href="{{ $bike->file('datasheet', app()->getLocale()) }}" download target="_blank" class="col-12 bigbutton bigbutton-dark"><i class="fas fa-file-pdf"></i> Télécharger la fiche technique</a>
+        </div>
+        @endif
     </div>
 </section>
 

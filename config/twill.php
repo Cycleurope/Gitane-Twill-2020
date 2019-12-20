@@ -278,13 +278,7 @@ return [
         ] ,
     ] ,
     'file_library' => [
-        'disk' => 'public',
-        'endpoint_type' => 'local',
-        'cascade_delete' => env('FILE_LIBRARY_CASCADE_DELETE', false),
-        'local_path' => env('FILE_LIBRARY_LOCAL_PATH'),
-        'file_service' => A17\Twill\Services\FileLibrary\Disk::class, ///<------
-        'acl' => env('FILE_LIBRARY_ACL', 'public-read'),
         'filesize_limit' => env('FILE_LIBRARY_FILESIZE_LIMIT', 50),
         'allowed_extensions' => ['woff', 'pdf'],
     ],
-]  ;
+] ;

@@ -205,23 +205,23 @@ $(document).ready(function() {
                     block_email = '';
 
                     if(marker.properties.isVelox) {
-                        block_velox = '<h4>Velo & Oxygen</h4>';
+                        block_velox = '<h4><span class="velox-label">Velo <span class="and">&</span> Oxygen</span></h4>';
                     }
 
-                    if(marker.properties.address2 != '') {
+                    if(marker.properties.address2 != '' && marker.properties.address2 != null) {
                         block_address = marker.properties.address1 + '<br />' + marker.properties.address2 + '<br />' + marker.properties.postalcode + ' ' + marker.properties.city;
                     } else {
                         block_address = marker.properties.address1 + '<br />' + marker.properties.postalcode + ' ' + marker.properties.city;
                     }
 
-                    if(marker.properties.phone != '') {
-                        block_phone = 'phone<li><i class="fas fa-phone"></i> ' + marker.properties.phone + '</li>';
+                    if(marker.properties.phone != '' && marker.properties.phone != null) {
+                        block_phone = '<li><i class="fas fa-phone"></i> ' + marker.properties.phone + '</li>';
                     } else {
                         block_phone = "Pas de phone";
                     }
                     
                     if(marker.properties.email != '') {
-                        block_phone = '<li><i class="fas fa-paper-plane"></i> ' + marker.properties.email + '</li>';
+                        block_email = '<li><i class="fas fa-paper-plane"></i> ' + marker.properties.email + '</li>';
                     }
                   
 
@@ -233,9 +233,10 @@ $(document).ready(function() {
                             <h3>` + marker.properties.title + `</h3>
                             ` + block_velox
                             + block_address
-                            + block_phone + 'BLOCK_PHONE'
-                            + block_email +`
-                            `
+                            +  `<ul>`
+                            + block_phone
+                            + block_email
+                            + `</ul>`
                         ))
                         .addTo(map);
             

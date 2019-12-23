@@ -22,6 +22,8 @@ Route::group(['prefix' => '{locale}' , 'where' => ['locale' => '[a-zA-Z]{2}'] , 
     Route::get('/families/{family}' , 'FamilyController@show')->name('site.families.show')  ;
     Route::get('/bikes/{id}' , 'BikeController@show')->name('site.bikes.show')  ;
     Route::get('/stores' , 'StoreController@index')->name('site.stores')  ;
+    Route::post('/submit' , 'ContactController@submit')->name('site.contact.submit')  ;
+    Route::get('/contact' , 'ContactController@index')->name('site.contact.index')  ;
     Route::get('/{page}' , 'PageController@show')->name('site.pages.show')  ;
 })  ;
 Route::get('/stores/europa' , 'StoreController@getEuropeanStores')->name('site.stores.europa');

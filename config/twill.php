@@ -278,7 +278,7 @@ return [
         ] ,
     ] ,
     'file_library' => [
-        'filesize_limit' => env('FILE_LIBRARY_FILESIZE_LIMIT', 50),
+        'filesize_limit' => env('FILE_LIBRARY_FILESIZE_LIMIT', 200),
         'allowed_extensions' => ['woff', 'pdf'],
     ],
 ] ;

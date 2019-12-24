@@ -9,7 +9,7 @@ return [
         'singular' => 'Caractéristique',
         'plural' => 'Caractéristiques',
     ],
-    'specifications'        => 'Spécifications Techniques',
+    'specifications' => 'Spécifications Techniques',
     'accessory'           => [
         'singular' => 'Accessoire',
         'plural' => 'Accessoires'
@@ -98,7 +98,7 @@ return [
             'plural' => 'Accessoires'
         ],
         'weight' => 'Poids',
-        'plus'                  => 'Plus',
+        'plus' => 'Plus',
     ]
 ];
 

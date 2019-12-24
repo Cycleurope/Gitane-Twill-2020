@@ -48,4 +48,16 @@
         'label' => 'Position',
         'name' => 'position',
     ])
+
 @stop
+
+@section('fieldsets')
+
+<a17-fieldset title="Documents" id="documents" :open="true">
+    @formField('files', [
+        'name' => 'book',
+        'label' => 'Catalogue',
+        'note' => 'Le catalogue doit être au format PDF.'
+    ])
+    </a17-fieldset>
+@endsection

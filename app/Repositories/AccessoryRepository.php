@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Repositories  ;
+namespace App\Repositories;
 
-use A17\Twill\Repositories\Behaviors\HandleTranslations  ;
-use A17\Twill\Repositories\Behaviors\HandleMedias  ;
-use A17\Twill\Repositories\ModuleRepository  ;
-use App\Models\Accessory  ;
+use A17\Twill\Repositories\Behaviors\HandleTranslations;
+use A17\Twill\Repositories\Behaviors\HandleMedias;
+use A17\Twill\Repositories\ModuleRepository;
+use App\Models\Accessory;
 
 class AccessoryRepository extends ModuleRepository
 {
-    use HandleTranslations , HandleMedias  ;
+    use HandleTranslations, HandleMedias;
 
     public function __construct(Accessory $model)
     {
-        $this->model = $model  ;
+        $this->model = $model;
     }
 }

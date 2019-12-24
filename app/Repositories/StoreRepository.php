@@ -16,10 +16,10 @@ class StoreRepository extends ModuleRepository
     }
 
 
-    public function afterSave($object , $fields)
+    public function afterSave($object, $fields)
     {
-        $this->updateBrowser($object , $fields, 'countries');
-        parent::afterSave($object , $fields);
+        $this->updateBrowser($object, $fields, 'countries');
+        parent::afterSave($objec, $fields);
     }
 
     public function getFormFields($object)

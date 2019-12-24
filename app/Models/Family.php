@@ -5,13 +5,14 @@ namespace App\Models;
 use A17\Twill\Models\Behaviors\HasTranslation;
 use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
+use A17\Twill\Models\Behaviors\HasFiles;
 use A17\Twill\Models\Behaviors\HasPosition;
 use A17\Twill\Models\Behaviors\Sortable;
 use A17\Twill\Models\Model;
 
 class Family extends Model implements Sortable
 {
-    use HasTranslation, HasSlug, HasMedias, HasPosition;
+    use HasTranslation, HasSlug, HasMedias, HasFiles, HasPosition;
 
     protected $fillable = [
         'published',
@@ -79,6 +80,8 @@ class Family extends Model implements Sortable
             ],
         ]
     ];
+
+    public $filesParams = ['book'];
 
     public function bikes()
     {

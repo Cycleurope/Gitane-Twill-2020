@@ -16,16 +16,16 @@ class CertificateRepository extends ModuleRepository
         $this->model = $model;
     }
 
-    public function afterSave($object , $fields)
+    public function afterSave($object, $fields)
     {
-        $this->updateBrowser($object , $fields ,'bikes')  ;
-        parent::afterSave($object , $fields)  ;
+        $this->updateBrowser($object, $fields, 'bikes');
+        parent::afterSave($object, $fields);
     }
 
     public function getFormFields($object)
     {
-        $fields = parent::getFormFields($object)  ;
-        $fields['browsers']['bikes'] = $this->getFormFieldsForBrowser($object , 'bikes')  ;
-        return $fields  ;
+        $fields = parent::getFormFields($object);
+        $fields['browsers']['bikes'] = $this->getFormFieldsForBrowser($object, 'bikes');
+        return $fields;
     }
 }

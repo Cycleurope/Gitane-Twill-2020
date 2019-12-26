@@ -290,7 +290,7 @@ class Bike extends Model implements Sortable
     public function getDatasheetSelectedAttribute($value)
     {
         if($this->file('datasheet', 'fr') != '') {
-            return '<i class="fas fa-file-pdf"></i>';
+            return '<i class="fa fa-check-circle text-ok"></i>';
         } else return '<span class="text-nope">-</span>';
     }
 }

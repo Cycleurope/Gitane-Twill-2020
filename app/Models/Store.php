@@ -98,7 +98,7 @@ class Store extends Model
     public function getIsGeolocatedAttribute($value)
     {
         if($this->latitude != '' && $this->longitude != "") {
-            return "<span style='color: #0aef00; font-weight: 600;'>Yes</span>";
-        } else return "<span class='text-red' style='color:#fa2000; font-weight: 600;'>No</span>";
+            return '<i class="fa fa-check-circle text-ok"></i>';
+        } else return '-';
     }
 }

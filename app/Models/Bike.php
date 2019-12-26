@@ -7,14 +7,11 @@ use A17\Twill\Models\Behaviors\HasTranslation;
 use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasFiles;
-use A17\Twill\Models\Behaviors\HasPosition;
 use A17\Twill\Models\Model;
 
 class Bike extends Model
 {
     use HasBlocks, HasTranslation, HasSlug, HasMedias, HasFiles;
-
-    protected $perPage = 10;
 
     protected $fillable = [
         'published',

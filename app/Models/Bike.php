@@ -293,4 +293,11 @@ class Bike extends Model implements Sortable
             return '<i class="fa fa-check-circle text-ok"></i>';
         } else return '<span class="text-nope">-</span>';
     }
+
+    public function getCerfileSelectedAttribute($value)
+    {
+        if($this->certificates->count() > 0) {
+            return '<i class="fa fa-check-circle text-ok"></i>';
+        } else return '-';
+    }
 }

@@ -23,8 +23,12 @@ class BikeController extends ModuleController
             'field' => 'sizes_selected'
         ],
         'datasheet_selected' => [
-            'title' => 'Fiche technique',
+            'title' => 'F.T.',
             'field' => 'datasheet_selected'
+        ],
+        'cerfile_selected' => [
+            'title' => 'Certificat',
+            'field' => 'cerfile_selected'
         ]
     ];
 }

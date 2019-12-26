@@ -7,7 +7,6 @@
             </div>
         </div>
         <div class="row owl-carousel" id="featured-products">
-            {{ count($featured) }}
             @foreach($featured as $f)
             <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $f->slug]) }}" class="bike-tile col-12">
                 <div class="picture">

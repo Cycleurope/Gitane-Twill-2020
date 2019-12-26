@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailDeContact;
+use App\Models\Message;
+use App\Models\Country;
 
 class ContactController extends Controller
 
 {
-
     public function __construct()
     {
         $this->middleware('web');
@@ -15,12 +18,16 @@ class ContactController extends Controller
 
     public function index()
     {
-        return view('site.contact');
+        $countries = Country::all();
+        return view('site.contact', [
+            'countries' => $countries
+        ]);
     }
 
     public function submit(Request $request)
     {
         request()->validate([
+            'title' => 'required',
             'lastname' => 'required',
             'firstname' => 'required',
             'email' => 'required|email',
@@ -28,9 +35,22 @@ class ContactController extends Controller
             'postalcode' => 'required',
             'city' => 'required'
         ]);
-        dd("ok");
+        
+        $data = [
+            'title' => $request->input('title'),
+            'firstname' => $request->input('firstname'),
+            'lastname' => $request->input('lastname'),
+            'address' => $request->input('address'),
+            'postalcode' => $request->input('postalcode'),
+            'city' => $request->input('city'),
+            'message' => $request->input('message')
+        ];
 
-        //return redirect()->route('site.contact.index');
+        Message::create(
+            $data
+        );
+
+        return redirect()->back();
 
     }
 }

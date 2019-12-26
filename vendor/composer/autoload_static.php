@@ -39,6 +39,10 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
     );
 
     public static $prefixLengthsPsr4 = array (
+        'q' => 
+        array (
+            'qoraiche\\mailEclipse\\' => 21,
+        ),
         'p' => 
         array (
             'phpseclib\\' => 10,
@@ -96,6 +100,7 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
         ),
         'R' => 
         array (
+            'ReeceM\\Mocker\\' => 14,
             'Ramsey\\Uuid\\' => 12,
         ),
         'P' => 
@@ -201,6 +206,10 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
     );
 
     public static $prefixDirsPsr4 = array (
+        'qoraiche\\mailEclipse\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/qoraiche/laravel-mail-editor/src',
+        ),
         'phpseclib\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
@@ -351,6 +360,10 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
         'Spatie\\Activitylog\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/laravel-activitylog/src',
+        ),
+        'ReeceM\\Mocker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/reecem/mocker/src',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -730,6 +743,7 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
         'App\\Http\\Controllers\\Admin\\CountryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/CountryController.php',
         'App\\Http\\Controllers\\Admin\\FamilyController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/FamilyController.php',
         'App\\Http\\Controllers\\Admin\\GeometryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/GeometryController.php',
+        'App\\Http\\Controllers\\Admin\\MessageController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/MessageController.php',
         'App\\Http\\Controllers\\Admin\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PageController.php',
         'App\\Http\\Controllers\\Admin\\SizeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/SizeController.php',
         'App\\Http\\Controllers\\Admin\\SlideController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/SlideController.php',
@@ -763,10 +777,12 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
         'App\\Http\\Requests\\Admin\\CountryRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Admin/CountryRequest.php',
         'App\\Http\\Requests\\Admin\\FamilyRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Admin/FamilyRequest.php',
         'App\\Http\\Requests\\Admin\\GeometryRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Admin/GeometryRequest.php',
+        'App\\Http\\Requests\\Admin\\MessageRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Admin/MessageRequest.php',
         'App\\Http\\Requests\\Admin\\PageRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Admin/PageRequest.php',
         'App\\Http\\Requests\\Admin\\SizeRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Admin/SizeRequest.php',
         'App\\Http\\Requests\\Admin\\SlideRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Admin/SlideRequest.php',
         'App\\Http\\Requests\\Admin\\StoreRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Admin/StoreRequest.php',
+        'App\\Mail\\MailDeContact' => __DIR__ . '/../..' . '/app/Mail/MailDeContact.php',
         'App\\Models\\Accessory' => __DIR__ . '/../..' . '/app/Models/Accessory.php',
         'App\\Models\\Bike' => __DIR__ . '/../..' . '/app/Models/Bike.php',
         'App\\Models\\Certificate' => __DIR__ . '/../..' . '/app/Models/Certificate.php',
@@ -775,6 +791,7 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
         'App\\Models\\Department' => __DIR__ . '/../..' . '/app/Models/Department.php',
         'App\\Models\\Family' => __DIR__ . '/../..' . '/app/Models/Family.php',
         'App\\Models\\Geometry' => __DIR__ . '/../..' . '/app/Models/Geometry.php',
+        'App\\Models\\Message' => __DIR__ . '/../..' . '/app/Models/Message.php',
         'App\\Models\\Page' => __DIR__ . '/../..' . '/app/Models/Page.php',
         'App\\Models\\Size' => __DIR__ . '/../..' . '/app/Models/Size.php',
         'App\\Models\\Slide' => __DIR__ . '/../..' . '/app/Models/Slide.php',
@@ -803,6 +820,7 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
         'App\\Repositories\\CountryRepository' => __DIR__ . '/../..' . '/app/Repositories/CountryRepository.php',
         'App\\Repositories\\FamilyRepository' => __DIR__ . '/../..' . '/app/Repositories/FamilyRepository.php',
         'App\\Repositories\\GeometryRepository' => __DIR__ . '/../..' . '/app/Repositories/GeometryRepository.php',
+        'App\\Repositories\\MessageRepository' => __DIR__ . '/../..' . '/app/Repositories/MessageRepository.php',
         'App\\Repositories\\PageRepository' => __DIR__ . '/../..' . '/app/Repositories/PageRepository.php',
         'App\\Repositories\\SizeRepository' => __DIR__ . '/../..' . '/app/Repositories/SizeRepository.php',
         'App\\Repositories\\SlideRepository' => __DIR__ . '/../..' . '/app/Repositories/SlideRepository.php',
@@ -14990,6 +15008,11 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
+        'ReeceM\\Mocker\\Mocked' => __DIR__ . '/..' . '/reecem/mocker/src/Mocked.php',
+        'ReeceM\\Mocker\\ReflectionMockery' => __DIR__ . '/..' . '/reecem/mocker/src/ReflectionMockery.php',
+        'ReeceM\\Mocker\\Traits\\ArrayMagic' => __DIR__ . '/..' . '/reecem/mocker/src/Traits/ArrayMagic.php',
+        'ReeceM\\Mocker\\Traits\\ObjectMagic' => __DIR__ . '/..' . '/reecem/mocker/src/Traits/ObjectMagic.php',
+        'ReeceM\\Mocker\\Utils\\VarStore' => __DIR__ . '/..' . '/reecem/mocker/src/Utils/VarStore.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',
@@ -16014,6 +16037,11 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
         'phpseclib\\Net\\SSH2' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Net/SSH2.php',
         'phpseclib\\System\\SSH\\Agent' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
         'phpseclib\\System\\SSH\\Agent\\Identity' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent/Identity.php',
+        'qoraiche\\mailEclipse\\Facades\\mailEclipse' => __DIR__ . '/..' . '/qoraiche/laravel-mail-editor/src/Facades/mailEclipse.php',
+        'qoraiche\\mailEclipse\\Http\\Controllers\\MailablesController' => __DIR__ . '/..' . '/qoraiche/laravel-mail-editor/src/Http/Controllers/MailablesController.php',
+        'qoraiche\\mailEclipse\\Http\\Controllers\\TemplatesController' => __DIR__ . '/..' . '/qoraiche/laravel-mail-editor/src/Http/Controllers/TemplatesController.php',
+        'qoraiche\\mailEclipse\\mailEclipse' => __DIR__ . '/..' . '/qoraiche/laravel-mail-editor/src/mailEclipse.php',
+        'qoraiche\\mailEclipse\\mailEclipseServiceProvider' => __DIR__ . '/..' . '/qoraiche/laravel-mail-editor/src/mailEclipseServiceProvider.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

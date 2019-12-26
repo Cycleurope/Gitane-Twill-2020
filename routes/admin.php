@@ -13,6 +13,7 @@ Route::group(['prefix' => 'book'] , function() {
 Route::module('slides');
 Route::module('stores');
 Route::module('pages');
+Route::module('messages');
 Route::module('countries');
 
 Route::module('families' , ['as' => 'admin'] , ['only' => ['edit']]);

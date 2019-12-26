@@ -39,13 +39,18 @@
             <div class="form-group">
                 <label for="">Pays</label>
                 <select name="" id="" class="form-control">
-                    <option value="">Pays</option>
+                    @foreach($countries as $country)
+                    <option value="{{ $country->translate(app()->getLocale())->title }}">{{ $country->translate(app()->getLocale())->title }}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-group">
+                <label for="">Sujet</label>
+                <input type="text" class="form-control" name="title">
+            </div>
+            <div class="form-group">
                 <label for="">Message</label>
-                <textarea name="" id="" rows="8" class="form-control"
-                data-error-msg="Veuillez taper votre message."></textarea>
+                <textarea name="message" id="" rows="8" class="form-control"></textarea>
             </div>
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -80,6 +85,12 @@ if ($("#contact-form").length > 0) {
             },
             city: {
                 required: true,
+            },
+            title: {
+                required: true,
+            },
+            message: {
+                required: true
             }
         },
         messages: {
@@ -100,6 +111,12 @@ if ($("#contact-form").length > 0) {
             },
             city: {
                 required: 'Entrez une ville'
+            },
+            title: {
+                required: 'Quel est le sujet de votre message ?',
+            },
+            message: {
+                required: 'Vous devez taper votre message.'
             }
         }
     })

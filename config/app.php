@@ -166,7 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        qoraiche\mailEclipse\mailEclipseServiceProvider::class,
         /*
          * Application Service Providers...
          */

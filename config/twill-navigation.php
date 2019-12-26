@@ -51,6 +51,10 @@ return [
         'title' => 'Pages' ,
         'module' => true
     ] ,
+    'messages' => [
+        'title' => 'Messages',
+        'module' => true
+    ],
     'settings' => [
         'title' => 'Paramètres' ,
         'route' => 'admin.settings' ,

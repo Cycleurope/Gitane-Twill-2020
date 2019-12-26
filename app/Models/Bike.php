@@ -8,12 +8,11 @@ use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasFiles;
 use A17\Twill\Models\Behaviors\HasPosition;
-use A17\Twill\Models\Behaviors\Sortable;
 use A17\Twill\Models\Model;
 
-class Bike extends Model implements Sortable
+class Bike extends Model
 {
-    use HasBlocks, HasTranslation, HasSlug, HasMedias, HasFiles, HasPosition;
+    use HasBlocks, HasTranslation, HasSlug, HasMedias, HasFiles;
 
     protected $perPage = 10;
 

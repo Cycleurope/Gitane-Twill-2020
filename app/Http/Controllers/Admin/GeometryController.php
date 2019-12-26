@@ -7,4 +7,6 @@ use A17\Twill\Http\Controllers\Admin\ModuleController;
 class GeometryController extends ModuleController
 {
     protected $moduleName = 'geometries';
+
+    protected $perPage = 10;
 }

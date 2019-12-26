@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Models  ;
+namespace App\Models;
 
-use A17\Twill\Models\Behaviors\HasMedias  ;
-use A17\Twill\Models\Behaviors\HasPosition  ;
-use A17\Twill\Models\Behaviors\Sortable  ;
-use A17\Twill\Models\Model  ;
+use A17\Twill\Models\Behaviors\HasMedias;
+use A17\Twill\Models\Behaviors\HasPosition;
+use A17\Twill\Models\Model;
 
-class Store extends Model implements Sortable
+class Store extends Model
 {
-    use HasMedias , HasPosition  ;
+    use HasMedias;
 
     protected $fillable = [
         'published' ,

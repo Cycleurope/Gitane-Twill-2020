@@ -10,6 +10,8 @@ class Color extends Model
 {
     use HasTranslation, HasMedias  ;
 
+    protected $perPage = 10;
+
     protected $fillable = [
         'published' ,
         'title' ,

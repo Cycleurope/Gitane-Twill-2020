@@ -7,7 +7,7 @@ use A17\Twill\Http\Controllers\Admin\ModuleController;
 class BikeController extends ModuleController
 {
     protected $moduleName = 'bikes';
-
+    protected $modelName = 'bike';
 
     protected $indexColumns = [
         'title' => [
@@ -31,4 +31,7 @@ class BikeController extends ModuleController
             'field' => 'cerfile_selected'
         ]
     ];
+
+    protected $perPage = 10;
+
 }

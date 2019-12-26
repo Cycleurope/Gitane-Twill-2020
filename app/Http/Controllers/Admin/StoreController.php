@@ -8,6 +8,8 @@ class StoreController extends ModuleController
 {
     protected $moduleName = 'stores';
 
+    protected $perPage = 10;
+
     protected $titleColumnKey = 'title';
 
     protected $indexWith = ['countries'];

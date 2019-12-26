@@ -47,16 +47,6 @@
         'label' => 'Couverture (Desktop)' ,
     ])
 
-    @formField('medias' ,[
-        'name' => 'tablet_cover' ,
-        'label' => 'Couverture (Tablet)' ,
-    ])
-
-    @formField('medias' ,[
-        'name' => 'mobile_cover' ,
-        'label' => 'Couverture (Mobile)' ,
-    ])
-
     @formField('wysiwyg' , [
         'name' => 'description' ,
         'label' => 'Description' ,

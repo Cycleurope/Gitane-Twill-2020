@@ -286,4 +286,11 @@ class Bike extends Model implements Sortable
     {
         return $this->sizes->implode('title', ', ');
     }
+
+    public function getDatasheetSelectedAttribute($value)
+    {
+        if($this->file('datasheet', 'fr') != '') {
+            return '<i class="fa fa-check-circle text-ok"></i>';
+        } else return '<span class="text-nope">-</span>';
+    }
 }

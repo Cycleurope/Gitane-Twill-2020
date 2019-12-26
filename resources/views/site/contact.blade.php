@@ -40,7 +40,7 @@
                 <label for="">Pays</label>
                 <select name="" id="" class="form-control">
                     @foreach($countries as $country)
-                    <option value="{{ $country->translate(app()->getLocale())->title }}">{{ $country->translate(app()->getLocale())->title }}</option>
+                    <option value="{{ $country->title }}">{{ $country->title }}</option>
                     @endforeach
                 </select>
             </div>

@@ -40,7 +40,7 @@ class Slide extends Model
             'default' => [ // crop name
                 [
                     'name' => 'default' , // ratio name , same as crop name if single
-                    'ratio' => 1800 / 600 , // ratio as a fraction or number
+                    'ratio' => 1800 / 900 , // ratio as a fraction or number
                 ] ,
             ] ,
         ] ,
@@ -48,7 +48,15 @@ class Slide extends Model
             'default' => [ // crop name
                 [
                     'name' => 'default' , // ratio name , same as crop name if single
-                    'ratio' => 1200 / 600 , // ratio as a fraction or number
+                    'ratio' => 1200 / 800 , // ratio as a fraction or number
+                ] ,
+            ] ,
+        ] ,
+        'square_slide' => [ // role name
+            'default' => [ // crop name
+                [
+                    'name' => 'default' , // ratio name , same as crop name if single
+                    'ratio' => 800 / 800 , // ratio as a fraction or number
                 ] ,
             ] ,
         ] ,
@@ -56,7 +64,7 @@ class Slide extends Model
             'default' => [ // crop name
                 [
                     'name' => 'default' , // ratio name , same as crop name if single
-                    'ratio' => 600 / 600 , // ratio as a fraction or number
+                    'ratio' => 800 / 1200 , // ratio as a fraction or number
                 ] ,
             ] ,
         ] ,

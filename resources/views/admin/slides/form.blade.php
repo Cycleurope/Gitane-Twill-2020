@@ -17,6 +17,11 @@
     ])
 
     @formField('medias',[
+        'name' => 'square_slide',
+        'label' => 'Slide (Square) (Mobile/Tablette)',
+    ])
+
+    @formField('medias',[
         'name' => 'mobile_slide',
         'label' => 'Slide (Mobile)',
     ])

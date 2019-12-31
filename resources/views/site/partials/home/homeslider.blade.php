@@ -4,7 +4,7 @@
     <div class="slide">
         <img src="{{ $slide->image('mobile_slide', 'default') }}" alt="" class="d-block d-sm-none">
         <img src="{{ $slide->image('square_slide', 'default') }}" alt="" class="d-none d-sm-block d-lg-none">
-        <img src="{{ $slide->image('tablet_slide', 'default') }}" alt="" class="d-none d-lg-block d-xl-block">
+        <img src="{{ $slide->image('tablet_slide', 'default') }}" alt="" class="d-none d-lg-block d-xl-none">
         <img src="{{ $slide->image('desktop_slide', 'default') }}" alt="" class="d-none d-xl-block">
         <div class="overlay"></div>
         <div class="caption">

@@ -20,5 +20,4 @@
 @include('site.partials.bike.related-products')
 @include('site.partials.find_a_dealer')
 
-</div>
 @endsection

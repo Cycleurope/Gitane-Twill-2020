@@ -1,5 +1,5 @@
 @if(count($bike->accessories) > 0)
-<section id="product-accessories" class="py-5">
+<section id="product-accessories">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">

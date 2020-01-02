@@ -1,4 +1,4 @@
-<section id="home-families" class="py-5">
+<section id="home-families">
     <div class="container">
         <div class="row">
             <div class="col-12">

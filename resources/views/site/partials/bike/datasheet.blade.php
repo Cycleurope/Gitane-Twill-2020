@@ -1,5 +1,5 @@
 @if( !$bike->emptyDataSheet() )
-<section id="product-specifications" class="py-5">
+<section id="product-specifications">
     <div class="container">
         <div class="row">
             <div class="col-12">

@@ -40,26 +40,26 @@
     @yield('content')
     <footer id="footer">
         <div class="container">
-            <section>
+            <section class="py-4">
                     <div class="row pt-5 py-4">
                         <img src="/img/footer_g_m.png" alt="" class="d-block d-sm-none">
                         <img src="/img/footer_g_t.png" alt="" class="d-none d-sm-block d-lg-none">
                         <img src="/img/footer_g_s.png" alt="" class="d-none d-lg-block d-xl-block">
                     </div>
             </section>
-            <section>
+            <section class="py-4">
                 <div class="row py-4">
                     @include('layouts.footer.footermenu')
                     @include('layouts.footer.pagesmenu')
                     @include('layouts.footer.socialnetworks')
                 </div>
             </section>
-            <section>
+            <section class="py-4">
                 <div class="row py-4">
                     <div class="col-12">@lang('common.gitane_mention')</div>
                 </div>
             </section>
-            <section>
+            <section class="py-4">
                 <div class="row py-4">
                     <div class="col-12">
                         <a href="mailto:contact@cycles-gitane.fr"><i class="fas fa-paper-plane mr-1"></i>&nbsp;@lang('common.contact_us')</a>

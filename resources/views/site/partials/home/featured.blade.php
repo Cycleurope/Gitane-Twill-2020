@@ -8,7 +8,7 @@
         </div>
         <div class="row owl-carousel" id="featured-products">
             @foreach($featured as $f)
-            <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $f->slug]) }}" class="bike-tile col-12">
+            <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $f->slug]) }}" class="tile col-12">
                 <div class="picture">
                     <img src="{{ $f->image('gallery', 'default', ['w' => 600]) }}" alt="" style="width: 100%">
                 </div>
@@ -17,8 +17,10 @@
                     <div class="plus-text">
                         <span>@lang('bike.discover')</span>
                     </div>
-                    <div class="name"><h3>{{ $f->translate(app()->getLocale())->name }}</h3></div>
+                    <div class="info-name">
+                        <div class="name"><h3>{{ $f->translate(app()->getLocale())->name }}</h3></div>
                     <div class="subname">{{ $f->translate(app()->getLocale())->subname }}</div>
+                    </div>
                     <hr />
                     <div class="from-price">
                         @if($f->price_from == 1)

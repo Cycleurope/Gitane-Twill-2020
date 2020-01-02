@@ -23,7 +23,7 @@
             </span>
             </div>
             <div id="bike-navigation-right" class="ml-auto">
-                <a href="{{ route('site.stores', ['locale' => app()->getLocale()]) }}" class="buy-button"><i class="fa fa-shopping-cart"></i>&nbsp;@lang('common.buy_this_bike')</a>
+                <a href="{{ route('site.stores', ['locale' => app()->getLocale()]) }}" class="buy-button"><i class="fa fa-shopping-cart"></i><span class="d-none d-md-block">&nbsp;@lang('common.buy_this_bike')</span></span></a>
             </div>
         </div>
     </div>

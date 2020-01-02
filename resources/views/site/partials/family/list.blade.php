@@ -2,7 +2,7 @@
     <div class="row">
         @foreach($family->bikes as $b)
             @if($b->published)
-            <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $b->slug]) }}" class="bike-tile col-12 col-sm-6 col-md-4 col-xl-3 px-5 px-sm-2">
+            <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $b->slug]) }}" class="tile col-12 col-sm-6 col-md-4 col-xl-3 px-5 px-sm-2">
                 <div class="picture">
                     @if($b->hasImage('gallery'))
                     <img src="{{ $b->image('gallery', 'default', ['w' => 800]) }}" alt="" style="width: 100%">
@@ -15,8 +15,10 @@
                     <div class="plus-text">
                         <span>@lang('bike.discover')</span>
                     </div>
-                    <div class="name"><h3>{{ $b->translate(app()->getLocale())->name }}</h3></div>
-                    <div class="subname">{{ $b->translate(app()->getLocale())->subname }}</div>
+                    <div class="info--name">
+                        <div class="name"><h3>{{ $b->translate(app()->getLocale())->name }}</h3></div>
+                        <div class="subname">{{ $b->translate(app()->getLocale())->subname }}</div>
+                    </div>
                     <hr />
                     @if($b->public_price > 0)
                     <div class="from-price">

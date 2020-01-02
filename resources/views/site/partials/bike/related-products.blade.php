@@ -9,7 +9,7 @@
         <div class="row">
             @foreach($related_bikes as $rb)
             @if($rb->id != $bike->id)
-            <div href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $rb->slug]) }}" class="tile col-12 col-sm-6 col-md-4">
+            <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $rb->slug]) }}" class="tile col-12 col-sm-6 col-md-4">
                 <div class="picture">
                     <img src="{{ $rb->image('gallery', 'default')}}" alt="">
                 </div>
@@ -35,7 +35,7 @@
                         @endforeach
                     </div>
                 </div>
-            </div> 
+            </a> 
             @endif
             @endforeach
         </div>

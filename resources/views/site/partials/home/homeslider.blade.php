@@ -10,7 +10,7 @@
             <div class="container">
                 <div class="row">
                     @if($slide->translate(app()->getLocale())->title != "")
-                    <div class="col-12 mb-5">
+                    <div class="col-12">
                         <div class="heading-container">
                             <span class="heading">{{ $slide->translate(app()->getLocale())->title }}</span>
                         </div>

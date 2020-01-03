@@ -15,6 +15,7 @@
             
             </ul>
             <ul class="nav navbar-nav ml-0 mr-0">
+                <li class="nav-item fad"><a href="" class="nav-link" id="modal-toggler"><i class="fas fa-search mr-2"></i> @lang('common.search')</a></li>
                 <li class="nav-item fad"><a class="nav-link" href="{{ route('site.stores', ['locale' => app()->getLocale()]) }}"><i class="fas fa-map-marker-alt mr-2"></i> @lang('common.find_a_dealer')</a></li>
             </ul>
             @include('layouts.language-switcher')

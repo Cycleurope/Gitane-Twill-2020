@@ -4,7 +4,10 @@ namespace App\Models\Translations;
 
 use A17\Twill\Models\Model;
 
-class BikeTranslation extends Model
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
+
+class BikeTranslation extends Model implements Searchable
 {
     protected $fillable = [
         'title',
@@ -20,4 +23,11 @@ class BikeTranslation extends Model
         'locale',
         'meta_description', 'meta_keywords',
     ];
+
+    public function getSearchResult(): SearchResult
+    {
+        $url = route('site.bikes.show', ["locale" => app()->getLocale(), "slug" => $this->slug]);
+
+        return new SearchResult($this, $this->title, $url);
+    }
 }

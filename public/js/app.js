@@ -1,8 +1,55 @@
 $(document).ready(function() {
+    var APP_LOCALE = $('html').attr('lang');
+    $("#modal-toggler").click(function(e) {
+        e.preventDefault();
+        $("#modal-search").fadeIn();
+    });
+
+    $("#modal-search .btn-close").click(function(e) {
+        $("#modal-search").fadeOut(function() {
+            $("#search-result").html("");
+        });
+        
+    });
 
     $('.navbar-toggler').click(function() {
         $(this).toggleClass('open');
     });
+
+    $('#input-search').on('input', function(){
+        $searchterm = $(this).val();
+        if($searchterm.length >= 3) {
+            var bikesList = null;
+            var list = "";
+            $.ajax({
+                url : '/jsearch/'+$searchterm,
+                type : 'GET',
+                dataType : 'json',
+                success : function(data){
+                    $("#search-result").html("");
+                    $.each(data.bikes, function(i, result){
+                        list+=createResultItem(result);
+                        $("#search-result").html(list);
+                    });
+                },
+                error: function() {
+                    console.log('Error');
+                }
+            });
+        } else {
+            $("#search-result").html("");
+        }
+    });
+
+    function createResultItem(item) {
+        if(item.subname != null) {
+            tpl = "<li><a href="+item.url+">"+item.name+" "+item.subname+"</a></li>";
+        } else {
+            tpl = "<li><a href="+item.url+">"+item.name+"</a></li>";
+        }
+        return tpl;
+    }
+
     $('#related-accessories').owlCarousel({
         responsive: {
             0: {
@@ -190,7 +237,15 @@ $(document).ready(function() {
                         storesJSON.stores.push(item);
                     }
                 });
-                console.log(storesJSON);
+                $('.dealer-item').find('.locateme').on('click', function() {
+                    console.log("Click me !");
+                        map.flyTo({
+                        center: [$(this).data('lng'),
+                        $(this).data('lat')
+                        ],
+                        essential: true // this animation is considered essential with respect to prefers-reduced-motion
+                        });
+                });
                 storesJSON.stores.forEach(function(marker) {
 
                     var el = document.createElement('div');
@@ -241,6 +296,7 @@ $(document).ready(function() {
                         .addTo(map);
             
                   });
+
             }
         });
         $.ajax({
@@ -251,6 +307,7 @@ $(document).ready(function() {
             }
         });
     });
+
 });
 
 function displayStoreBlock(store) {
@@ -274,6 +331,12 @@ function displayStoreBlock(store) {
         block_address2 = `<br />`+store_address2;
     }
 
+    var button_locateme = '';
+    if(store.latitude != null || store.longitude != null) {
+        console.log(store.latitude);
+        button_locateme = `<button class="locateme btn btn-framed filled filled-dark" data-lng="`+store.longitude+`" data-lat="`+store.latitude+`">Localiser</button>`;
+    }
+
     var tpl = 
     `<div class="dealer-item px-4 py-5">
         <h2>`+store_name+`</h2>
@@ -282,8 +345,8 @@ function displayStoreBlock(store) {
         <hr class="light">
         <i class="fas fa-phone"></i> `+store.phone+`
         <br /><i class="fas fa-paper-plane"></i> `+store.email+`
-        <br /><button class="btn btn-framed filled filled-dark">Localiser</button>
-    </div>`;
+        <br />`+button_locateme+
+    `</div>`;
 
     return tpl;
 }

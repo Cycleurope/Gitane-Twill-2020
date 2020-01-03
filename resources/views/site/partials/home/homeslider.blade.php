@@ -1,7 +1,7 @@
 @if(count($slides) > 0)
-<div id="home-slider" class="owl-carousel">
+<div id="home-slider" class="owl-carousel" style="">
     @foreach($slides as $slide)
-    <div class="slide px-0">
+    <div class=" px-0">
         <img src="{{ $slide->image('square_slide', 'default') }}" alt="" class="d-block d-lg-none">
         <img src="{{ $slide->image('tablet_slide', 'default') }}" alt="" class="d-none d-lg-block d-xl-none">
         <img src="{{ $slide->image('desktop_slide', 'default') }}" alt="" class="d-none d-xl-block">

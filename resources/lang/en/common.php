@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'europa' => 'EUropa',
+    'search' => "Search",
+    'europa' => 'Europa',
     'north_america' => 'North America',
     'south_america' => 'SOuth America',
     'africa' => 'Africa',

@@ -9,7 +9,10 @@ use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasFiles;
 use A17\Twill\Models\Model;
 
-class Bike extends Model
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
+
+class Bike extends Model implements Searchable
 {
     use HasBlocks, HasTranslation, HasSlug, HasMedias, HasFiles;
 
@@ -296,4 +299,12 @@ class Bike extends Model
             return '<i class="fa fa-check-circle text-ok"></i>';
         } else return '-';
     }
+
+    public function getSearchResult(): SearchResult
+    {
+        $url = route('site.home', ['locale' => app()->getLocale(), 'bike' => $this->slug]);
+
+        return new SearchResult($this, $this->title, $url);
+    }
+
 }

@@ -8,7 +8,10 @@ use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Model;
 
-class Page extends Model
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
+
+class Page extends Model implements Searchable
 {
     use HasBlocks, HasTranslation, HasSlug, HasMedias;
 
@@ -55,4 +58,14 @@ class Page extends Model
             ]
         ],
     ];
+
+    public function getSearchResult(): SearchResult
+    {
+        
+        $url = route('site.bike.show', $this->id);
+
+        return new SearchResult($this, $this->title, $url);
+
+    }
+    
 }

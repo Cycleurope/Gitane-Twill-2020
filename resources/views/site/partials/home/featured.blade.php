@@ -1,14 +1,14 @@
 @if(count($featured) > 0)
 <section id="home-featured" class="py-5">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-12">
                 <h2><span>@lang('common.focus')</span></h2>
             </div>
         </div>
-        <div class="row owl-carousel" id="featured-products">
+        <div class="owl-carousel px-0" id="featured-products">
             @foreach($featured as $f)
-            <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $f->slug]) }}" class="tile col-12">
+            <a href="{{ route('site.bikes.show', ['locale' => app()->getLocale(), 'bike' => $f->slug]) }}" class="tile col-12 px-0">
                 <div class="picture">
                     <img src="{{ $f->image('gallery', 'default', ['w' => 600]) }}" alt="" style="width: 100%">
                 </div>

@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'search' => 'Rechercher',
     'europa' => 'Europe',
     'north_america' => 'Amérique du Nord',
     'south_america' => 'Amérique du Sud',

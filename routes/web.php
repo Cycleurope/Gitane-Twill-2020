@@ -35,4 +35,5 @@ Route::get('/stores/oceania' , 'StoreController@getOceanianStores')->name('site.
 Route::get('/stores/{dep}' , 'StoreController@getStoresForDepartment')->name('site.stores.fordepartment');
 Route::get('/geostores/{dep}' , 'StoreController@getGeolocatedStoresForDepartment')->name('site.geostores.fordepartment');
 Route::get('/certificates' , 'CertificateController@index')->name('site.certificates.index');
+Route::get('/jsearch/{searchterm}', 'SearchController@jsearch')->name('site.jsearch');
 

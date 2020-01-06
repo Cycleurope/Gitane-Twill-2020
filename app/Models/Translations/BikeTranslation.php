@@ -3,13 +3,13 @@
 namespace App\Models\Translations;
 
 use A17\Twill\Models\Model;
-use Laravel\Scout\Searchable;
+//use Laravel\Scout\Searchable;
 //use Spatie\Searchable\Searchable;
-use Spatie\Searchable\SearchResult;
+//use Spatie\Searchable\SearchResult;
 
 class BikeTranslation extends Model
 {
-    use Searchable;
+    // use Searchable;
     
     protected $fillable = [
         'title',
@@ -26,10 +26,10 @@ class BikeTranslation extends Model
         'meta_description', 'meta_keywords',
     ];
 
-    public function getSearchResult(): SearchResult
-    {
-        $url = route('site.bikes.show', ["locale" => app()->getLocale(), "slug" => $this->slug]);
+    // public function getSearchResult(): SearchResult
+    // {
+    //     $url = route('site.bikes.show', ["locale" => app()->getLocale(), "slug" => $this->slug]);
 
-        return new SearchResult($this, $this->title, $url);
-    }
+    //     return new SearchResult($this, $this->title, $url);
+    // }
 }

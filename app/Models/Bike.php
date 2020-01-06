@@ -9,13 +9,13 @@ use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasFiles;
 use A17\Twill\Models\Model;
 
-use Laravel\Scout\Searchable;
+//use Laravel\Scout\Searchable;
 //use Spatie\Searchable\Searchable;
-use Spatie\Searchable\SearchResult;
+//use Spatie\Searchable\SearchResult;
 
 class Bike extends Model    
 {
-    use HasBlocks, HasTranslation, HasSlug, HasMedias, HasFiles, Searchable;
+    use HasBlocks, HasTranslation, HasSlug, HasMedias, HasFiles;
 
     protected $fillable = [
         'published',
@@ -301,11 +301,11 @@ class Bike extends Model
         } else return '-';
     }
 
-    public function getSearchResult(): SearchResult
-    {
-        $url = route('site.home', ['locale' => app()->getLocale(), 'bike' => $this->slug]);
+    // public function getSearchResult(): SearchResult
+    // {
+    //     $url = route('site.home', ['locale' => app()->getLocale(), 'bike' => $this->slug]);
 
-        return new SearchResult($this, $this->title, $url);
-    }
+    //     return new SearchResult($this, $this->title, $url);
+    // }
 
 }

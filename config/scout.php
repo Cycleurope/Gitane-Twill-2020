@@ -88,4 +88,13 @@ return [
         'secret' => env('ALGOLIA_SECRET', ''),
     ],
 
+    'mysql' => [
+        'mode' => 'LIKE_EXPANDED',
+        //'model_directories' => [env('APP_PATH'), env('APP_PATH').'Models/'],
+        'min_search_length' => 0,
+        'min_fulltext_search_length' => 4,
+        'min_fulltext_search_fallback' => 'LIKE',
+        'query_expansion' => false
+    ],
+
 ];

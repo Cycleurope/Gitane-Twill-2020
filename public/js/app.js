@@ -1,5 +1,10 @@
 $(document).ready(function() {
     var APP_LOCALE = $('html').attr('lang');
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 200,
+        speedAsDuration: true,
+        header: '[data-scroll-header]',
+    });
     $("#modal-toggler").click(function(e) {
         e.preventDefault();
         $("#modal-search").fadeIn();
@@ -22,15 +27,18 @@ $(document).ready(function() {
             var bikesList = null;
             var list = "";
             $.ajax({
-                url : '/jsearch/'+$searchterm,
+                url : '/'+APP_LOCALE+'/jsearch/'+$searchterm,
                 type : 'GET',
                 dataType : 'json',
                 success : function(data){
+                    console.log(data);
                     $("#search-result").html("");
                     $.each(data.bikes, function(i, result){
                         list+=createResultItem(result);
-                        $("#search-result").html(list);
                     });
+                    list = "<ul>"+list+"</ul>";
+                    $("#search-result").html(list);
+
                 },
                 error: function() {
                     console.log('Error');
@@ -43,9 +51,9 @@ $(document).ready(function() {
 
     function createResultItem(item) {
         if(item.subname != null) {
-            tpl = "<li><a href="+item.url+">"+item.name+" "+item.subname+"</a></li>";
+            tpl = "<li><a href="+item.url+">"+item.name+" "+item.subname+"</a><br /><small><a href="+item.family_url+">"+item.family_name+"</a></small></li>";
         } else {
-            tpl = "<li><a href="+item.url+">"+item.name+"</a></li>";
+            tpl = "<li><a href="+item.url+">"+item.name+"</a><br /><small><a href="+item.family_url+">"+item.family_name+"</a></small></li>";
         }
         return tpl;
     }
@@ -176,12 +184,6 @@ $(document).ready(function() {
           .addTo(map);
 
       });
-
-
-    var scroll = new SmoothScroll('a[href*="#"]',{
-        header: '[data-scroll-header]',
-        speed: 300
-	});
 
     var store_item;
     var address_line1 = '';

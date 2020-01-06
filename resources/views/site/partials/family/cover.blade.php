@@ -1,4 +1,4 @@
-<section id="family-cover">
+<section id="family-cover" class="py-0">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 px-0">

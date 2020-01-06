@@ -31,4 +31,11 @@ class AppController extends Controller
         session()->put('locale', $locale);
         return redirect('/');
     }
+
+    public function language(String $locale)
+    {
+        $locale = in_array($locale, config('app.locales')) ? $locale : config('app.fallback_locale');
+        session(['locale' => $locale]);
+        return back();
+    }
 }

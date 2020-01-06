@@ -177,6 +177,7 @@ return [
         App\Providers\RouteServiceProvider::class ,
 
         Laravel\Scout\ScoutServiceProvider::class,
+        Yab\MySQLScout\Providers\MySQLScoutServiceProvider::class,
 
     ],
 

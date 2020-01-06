@@ -35,4 +35,5 @@ return array(
     '72b1e3f4a2af9b30b3f137b3ec2057fc' => $vendorDir . '/spatie/laravel-activitylog/src/helpers.php',
     'ed33d19cba977f2a7e321f120d94a872' => $vendorDir . '/spatie/once/src/functions.php',
     '0d8253363903f0ac7b0978dcde4e28a0' => $vendorDir . '/beyondcode/laravel-dump-server/helpers.php',
+    '67969b779fc2b57b79f39cdaef36a10e' => $vendorDir . '/yab/laravel-scout-mysql-driver/src/helpers.php',
 );

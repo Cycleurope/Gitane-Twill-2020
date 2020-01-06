@@ -9,12 +9,13 @@ use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasFiles;
 use A17\Twill\Models\Model;
 
-use Spatie\Searchable\Searchable;
+use Laravel\Scout\Searchable;
+//use Spatie\Searchable\Searchable;
 use Spatie\Searchable\SearchResult;
 
-class Bike extends Model implements Searchable
+class Bike extends Model    
 {
-    use HasBlocks, HasTranslation, HasSlug, HasMedias, HasFiles;
+    use HasBlocks, HasTranslation, HasSlug, HasMedias, HasFiles, Searchable;
 
     protected $fillable = [
         'published',

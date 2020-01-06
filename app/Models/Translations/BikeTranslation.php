@@ -3,12 +3,14 @@
 namespace App\Models\Translations;
 
 use A17\Twill\Models\Model;
-
-use Spatie\Searchable\Searchable;
+use Laravel\Scout\Searchable;
+//use Spatie\Searchable\Searchable;
 use Spatie\Searchable\SearchResult;
 
-class BikeTranslation extends Model implements Searchable
+class BikeTranslation extends Model
 {
+    use Searchable;
+    
     protected $fillable = [
         'title',
         'name', 'subname',

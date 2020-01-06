@@ -30,13 +30,19 @@ class SearchController extends Controller
         //                 ->search($searchterm);
         // return response()->json($search_results);
         $slugs_array = [];
-        $bikes = BikeTranslation::where('title', 'LIKE', '%'.$searchterm.'%')
-            ->where('locale', app()->getLocale())->get();
-        $i = 0;
+        $i = 0; 
+
+        $bikes = BikeTranslation::search($searchterm)->where('locale', app()->getLocale())->get();
         foreach($bikes as $bike) {
             $bike_id = $bike->bike_id;
             $bike_slug = Bike::find($bike_id)->slug;
+            $bike_family = Bike::find($bike_id)->first()->families()->first()->translate(app()->getLocale())->title;
+            $family_slug = Bike::find($bike_id)->first()->families()->first()->slug;
             $bikes[$i]["url"] = route('site.bikes.show', ["locale" => app()->getLocale(), "slug" => $bike_slug]);
+            $bikes[$i]["locale"] = app()->getLocale();
+            $bikes[$i]["family_name"] = $bike_family;
+            $bikes[$i]["family_slug"] = Bike::find($bike_id)->first()->families()->first()->slug;
+            $bikes[$i]["family_url"] = route('site.families.show', ["locale" => app()->getLocale(), "slug" => $family_slug]);
             $i++;
         }
         $json = [

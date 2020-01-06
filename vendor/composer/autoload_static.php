@@ -36,6 +36,7 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
         '72b1e3f4a2af9b30b3f137b3ec2057fc' => __DIR__ . '/..' . '/spatie/laravel-activitylog/src/helpers.php',
         'ed33d19cba977f2a7e321f120d94a872' => __DIR__ . '/..' . '/spatie/once/src/functions.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
+        '67969b779fc2b57b79f39cdaef36a10e' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -47,6 +48,10 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
         array (
             'phpseclib\\' => 10,
             'phpDocumentor\\Reflection\\' => 25,
+        ),
+        'Y' => 
+        array (
+            'Yab\\MySQLScout\\' => 15,
         ),
         'X' => 
         array (
@@ -221,6 +226,10 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'Yab\\MySQLScout\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -770,6 +779,7 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\FamilyController' => __DIR__ . '/../..' . '/app/Http/Controllers/FamilyController.php',
         'App\\Http\\Controllers\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/PageController.php',
+        'App\\Http\\Controllers\\SearchController' => __DIR__ . '/../..' . '/app/Http/Controllers/SearchController.php',
         'App\\Http\\Controllers\\StoreController' => __DIR__ . '/../..' . '/app/Http/Controllers/StoreController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -15976,6 +15986,21 @@ class ComposerStaticInitd93aae0420a2ee7acc497393a6a0344e
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'Yab\\MySQLScout\\Commands\\ManageIndexes' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Commands/ManageIndexes.php',
+        'Yab\\MySQLScout\\Engines\\Modes\\Boolean' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Engines/Modes/Boolean.php',
+        'Yab\\MySQLScout\\Engines\\Modes\\Like' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Engines/Modes/Like.php',
+        'Yab\\MySQLScout\\Engines\\Modes\\LikeExpanded' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Engines/Modes/LikeExpanded.php',
+        'Yab\\MySQLScout\\Engines\\Modes\\Mode' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Engines/Modes/Mode.php',
+        'Yab\\MySQLScout\\Engines\\Modes\\ModeContainer' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Engines/Modes/ModeContainer.php',
+        'Yab\\MySQLScout\\Engines\\Modes\\NaturalLanguage' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Engines/Modes/NaturalLanguage.php',
+        'Yab\\MySQLScout\\Engines\\MySQLEngine' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Engines/MySQLEngine.php',
+        'Yab\\MySQLScout\\Events\\ModelIndexCreated' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Events/ModelIndexCreated.php',
+        'Yab\\MySQLScout\\Events\\ModelIndexDropped' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Events/ModelIndexDropped.php',
+        'Yab\\MySQLScout\\Events\\ModelIndexIgnored' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Events/ModelIndexIgnored.php',
+        'Yab\\MySQLScout\\Events\\ModelIndexUpdated' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Events/ModelIndexUpdated.php',
+        'Yab\\MySQLScout\\Providers\\MySQLScoutServiceProvider' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Providers/MySQLScoutServiceProvider.php',
+        'Yab\\MySQLScout\\Services\\IndexService' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Services/IndexService.php',
+        'Yab\\MySQLScout\\Services\\ModelService' => __DIR__ . '/..' . '/yab/laravel-scout-mysql-driver/src/Services/ModelService.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',

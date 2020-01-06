@@ -11,12 +11,8 @@
 |
 */
 
-Route::get('/' , 'AppController@home')->name('site.home')  ;
-Route::get('lang/{locale}',function($lang){
-    \Session::put('locale', $lang);
-    \App::setLocale($lang);
-    return redirect(app()->getLocale());   
-});
+Route::get('/' , 'AppController@home')->name('site.home');
+
 Route::group(['prefix' => '{locale}' , 'where' => ['locale' => '[a-zA-Z]{2}'] , 'middleware' => 'setlocale'] , function() {
     Route::get('/' , 'AppController@home')->name('site.home')  ;
     Route::get('/families/{family}' , 'FamilyController@show')->name('site.families.show')  ;
@@ -35,5 +31,5 @@ Route::get('/stores/oceania' , 'StoreController@getOceanianStores')->name('site.
 Route::get('/stores/{dep}' , 'StoreController@getStoresForDepartment')->name('site.stores.fordepartment');
 Route::get('/geostores/{dep}' , 'StoreController@getGeolocatedStoresForDepartment')->name('site.geostores.fordepartment');
 Route::get('/certificates' , 'CertificateController@index')->name('site.certificates.index');
-Route::get('/jsearch/{searchterm}', 'SearchController@jsearch')->name('site.jsearch');
+Route::get('/{locale}/jsearch/{searchterm}', 'SearchController@jsearch')->name('site.jsearch');
 

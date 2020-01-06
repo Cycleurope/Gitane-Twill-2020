@@ -3,11 +3,19 @@
     <div class="container-fluid">
         <div class="row">
                 @php( $images = $bike->images('gallery', 'default') )
-                <div id="product-pictures" class="col-12 col-lg-7 px-0 owl-carousel">
-                    @foreach( $images as $item )
-                        <img src="{{ $item }}" alt="">
-                    @endforeach
-                </div>
+                @if(count($images) > 1)
+                    <div id="product-pictures" class="col-12 col-lg-7 px-0 owl-carousel">
+                        @foreach( $images as $item )
+                            <img src="{{ $item }}" alt="">
+                        @endforeach
+                    </div>
+                @else
+                    <div id="product-pictures" class="col-12 col-lg-7 px-0">
+                        @foreach( $images as $item )
+                            <img src="{{ $item }}" alt="">
+                        @endforeach
+                    </div>
+                @endif
             <div id="product-info" class="col-12 col-lg-5">
                 @include('site.partials.bike.overview.block_name')
                 @include('site.partials.bike.overview.block_price')

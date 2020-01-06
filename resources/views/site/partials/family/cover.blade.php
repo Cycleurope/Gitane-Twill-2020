@@ -10,7 +10,7 @@
                     <img src="{{ $family->image('cover', 'tablet') }}" alt="" width="100%" class="d-none d-md-block d-lg-none">
                     @endif
                     @if($family->hasImage('cover', 'mobile'))
-                    <img src="{{ $family->image('cover', 'mobile') }}" alt="" width="100%" class="d-block d-md-none">
+                    <img src="{{ $family->image('cover', 'square') }}" alt="" width="100%" class="d-block d-md-none">
                     @endif
                 </div>
                 <div class="cover-overlay"></div>

@@ -31,15 +31,6 @@
     ])
 
     @formField('medias', [
-        'name' => 'tablet_cover',
-        'label' => 'Couverture Tablette',
-    ])
-
-    @formField('medias', [
-        'name' => 'mobile_cover',
-        'label' => 'Couverture Mobile',
-    ])
-    @formField('medias', [
         'name' => 'tile',
         'label' => 'Tuile',
     ])

@@ -1,4 +1,10 @@
+@formField('medias', [
+    'name' => 'default_picture',
+    'label' => 'Image FullWidth (Desktop) (Non-cropped)',
+    'note' => 'Largeur minimal de l\'image : 1200px',
+])
 
+<p>L'image "Desktop Picture" sera utilisée à la place de "Default Picture" si le champ est renseigné.</p>
 @formField('medias', [
     'name' => 'desktop_picture',
     'label' => 'Image FullWidth (Desktop)',
@@ -7,7 +13,7 @@
 
 
 @formField('medias', [
-    'name' => 'tabley_picture',
+    'name' => 'tablet_picture',
     'label' => 'Image FullWidth (Tablette)',
     'note' => 'Largeur minimal de l\'image : 1200px',
 ])

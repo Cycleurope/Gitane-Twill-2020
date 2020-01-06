@@ -228,6 +228,14 @@ return [
             'desktop_picture' => [
                 'default' => [
                     [
+                        'name' => 'default' ,
+                        'ratio' => null ,
+                    ] ,
+                ] ,
+            ] ,
+            'desktop_picture' => [
+                'default' => [
+                    [
                         'name' => 'landscape' ,
                         'ratio' => 16 / 9 ,
                     ] ,

@@ -1,5 +1,5 @@
 @if(count($bike->blocks) > 0)
-<section id="product-features">
+<section id="product-features" class="py-0">
     <div class="container-fluid">
         <div class="row">
             <div class="col">

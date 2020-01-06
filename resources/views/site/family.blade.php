@@ -13,7 +13,7 @@
 @include('site.partials.family.cover')
 @include('site.partials.family.heading')
 @include('site.partials.family.list')
-@include('site.partials.family.download-book');
+@include('site.partials.family.download-book')
 @include('site.partials.find_a_dealer')
 
 @endsection

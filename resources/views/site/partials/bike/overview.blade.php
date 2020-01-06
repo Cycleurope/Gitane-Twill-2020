@@ -10,7 +10,7 @@
                         @endforeach
                     </div>
                 @else
-                    <div id="product-pictures" class="col-12 col-lg-7 px-0">
+                    <div id="product-picture" class="col-12 col-lg-7 px-0">
                         @foreach( $images as $item )
                             <img src="{{ $item }}" alt="">
                         @endforeach

@@ -175,9 +175,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class ,
         App\Providers\EventServiceProvider::class ,
         App\Providers\RouteServiceProvider::class ,
-
-        Laravel\Scout\ScoutServiceProvider::class,
-        Yab\MySQLScout\Providers\MySQLScoutServiceProvider::class,
+        //Laravel\Scout\ScoutServiceProvider::class,
+        //Yab\MySQLScout\Providers\MySQLScoutServiceProvider::class,
 
     ],
 

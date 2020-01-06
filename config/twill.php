@@ -225,7 +225,7 @@ return [
                     ] ,
                 ] ,
             ] ,
-            'desktop_picture' => [
+            'default_picture' => [
                 'default' => [
                     [
                         'name' => 'default' ,

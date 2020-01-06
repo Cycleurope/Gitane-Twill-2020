@@ -1,10 +1,10 @@
 <div class="row">
     <div class="col-12 px-0">
-        @if($block->image('desktop_picture', 'default') != '')
-            <img src="{{ $block->image('desktop_picture', 'default') }}" alt="" width="100%" class="d-none d-lg-block">
+        @if($block->image('default_picture', 'default') != '')
+            <img src="{{ $block->image('default_picture', 'default') }}" alt="" width="100%" class="d-none d-lg-block">
         @else
-            @if($block->image('default_picture', 'default') != '')
-                <img src="{{ $block->image('default_picture', 'default') }}" alt="" width="100%" class="d-none d-lg-block">
+            @if($block->image('desktop_picture', 'default') != '')
+                <img src="{{ $block->image('desktop_picture', 'default') }}" alt="" width="100%" class="d-none d-lg-block">
             @endif
         @endif
         @if($block->image('tablet_picture', 'default') != '')

@@ -10,6 +10,12 @@ use App;
 
 class AppController extends Controller
 {
+    public function redirectToHome()
+    {
+        session()->put('locale', 'fr');
+        App::setLocale('fr');
+        return redirect()->route('site.home', 'fr');
+    }
     public function home()
     {
         $featured = Feature::where('bucket_key' , 'home_primary_featured')->get()->map(function($feature) {
@@ -37,5 +43,12 @@ class AppController extends Controller
         $locale = in_array($locale, config('app.locales')) ? $locale : config('app.fallback_locale');
         session(['locale' => $locale]);
         return back();
+    }
+
+    public function lang($locale)
+    {
+        App::setLocale($locale);
+        session()->put('locale', $locale);  
+        return redirect()->back();
     }
 }

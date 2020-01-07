@@ -25,6 +25,8 @@ class Store extends Model
         'latitude' ,
         'longitude' ,
         'position' ,
+        'dep',
+        'velox',
         // 'featured' ;
         // 'publish_start_date' ;
         // 'publish_end_date' ;

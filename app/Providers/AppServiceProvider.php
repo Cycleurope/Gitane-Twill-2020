@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Providers  ;
+namespace App\Providers;
 
-use Illuminate\Database\Eloquent\Relations\Relation  ;
-use Illuminate\Support\ServiceProvider  ;
-use Blade  ;
+use Illuminate\Database\Eloquent\Relations\Relation;
+use Illuminate\Support\ServiceProvider;
+use Blade;
 
 class AppServiceProvider extends ServiceProvider
 {

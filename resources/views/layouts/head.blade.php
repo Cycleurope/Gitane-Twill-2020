@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="description" content="@yield('metaDescription', $website_description)">
     <meta name="keywords" content="@yield('metaKeywords', $website_keywords)">
+    @include("layouts.header.open-graph")
     <title>{{ $website_prefix }}@yield('pageTitle')</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/jtc2ito.css">
@@ -15,4 +16,5 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+    @include("layouts.header.analytics")
   </head>

@@ -1,7 +1,7 @@
 <?php
 
 // Register Twill routes here (eg. Route::module('posts'))
-Route::group(['prefix' => 'book'] , function() {
+Route::group(['prefix' => 'book'], function() {
     Route::module('families');
     Route::module('bikes');
     Route::module('colors');
@@ -16,10 +16,10 @@ Route::module('pages');
 Route::module('messages');
 Route::module('countries');
 
-Route::module('families' , ['as' => 'admin'] , ['only' => ['edit']]);
-Route::module('colors' , ['as' => 'admin'] , ['only' => ['edit']]);
-Route::module('sizes' , ['as' => 'admin'] , ['only' => ['edit']]);
-Route::module('accessories' , ['as' => 'admin'] , ['only' => ['edit']]);
-Route::module('geometries' , ['as' => 'admin'] , ['only' => ['edit']]);
-Route::module('bikes' , ['as' => 'admin'] , ['only' => ['edit']]);
-Route::module('countries' , ['as' => 'admin'] , ['only' => ['edit']]);
+Route::module('families', ['as' => 'admin'], ['only' => ['edit']]);
+Route::module('colors', ['as' => 'admin'], ['only' => ['edit']]);
+Route::module('sizes', ['as' => 'admin'], ['only' => ['edit']]);
+Route::module('accessories', ['as' => 'admin'], ['only' => ['edit']]);
+Route::module('geometries', ['as' => 'admin'], ['only' => ['edit']]);
+Route::module('bikes', ['as' => 'admin'], ['only' => ['edit']]);
+Route::module('countries', ['as' => 'admin'], ['only' => ['edit']]);

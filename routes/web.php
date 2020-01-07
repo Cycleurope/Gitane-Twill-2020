@@ -11,28 +11,28 @@
 |
 */
 
-Route::get('/' , 'AppController@redirectToHome')->name('site.redirect-to-home');
+Route::get('/', 'AppController@redirectToHome')->name('site.redirect-to-home');
 Route::get('/lang/{locale2}', 'LocalizationController@index')->name('site.switch-language');
 
 
-Route::group(['prefix' => '{locale}' , 'where' => ['locale' => '[a-zA-Z]{2}'], 'middleware' => 'setlocale'] , function() {
-    Route::get('/' , 'AppController@home')->name('site.home')  ;
-    Route::get('/families/{family}' , 'FamilyController@show')->name('site.families.show')  ;
-    Route::get('/bikes/{id}' , 'BikeController@show')->name('site.bikes.show')  ;
-    Route::get('/stores' , 'StoreController@index')->name('site.stores')  ;
-    Route::post('/submit' , 'ContactController@submit')->name('site.contact.submit')  ;
-    Route::get('/contact' , 'ContactController@index')->name('site.contact.index')  ;
-    Route::get('/{page}' , 'PageController@show')->name('site.pages.show')  ;
+Route::group(['prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'middleware' => 'setlocale'], function() {
+    Route::get('/', 'AppController@home')->name('site.home');
+    Route::get('/families/{family}', 'FamilyController@show')->name('site.families.show');
+    Route::get('/bikes/{id}', 'BikeController@show')->name('site.bikes.show');
+    Route::get('/stores', 'StoreController@index')->name('site.stores');
+    Route::post('/submit', 'ContactController@submit')->name('site.contact.submit');
+    Route::get('/contact', 'ContactController@index')->name('site.contact.index');
+    Route::get('/{page}', 'PageController@show')->name('site.pages.show');
 });
 
-Route::get('/stores/europa' , 'StoreController@getEuropeanStores')->name('site.stores.europa');
-Route::get('/stores/north-america' , 'StoreController@getNorthAmericanStores')->name('site.stores.northamerica');
-Route::get('/stores/south-america' , 'StoreController@getSouthAmericanStores')->name('site.stores.southamerica');
-Route::get('/stores/africa' , 'StoreController@getAfricanStores')->name('site.stores.africa');
-Route::get('/stores/asia' , 'StoreController@getAsianStores')->name('site.stores.asia');
-Route::get('/stores/oceania' , 'StoreController@getOceanianStores')->name('site.stores.oceania');
-Route::get('/stores/{dep}' , 'StoreController@getStoresForDepartment')->name('site.stores.fordepartment');
-Route::get('/geostores/{dep}' , 'StoreController@getGeolocatedStoresForDepartment')->name('site.geostores.fordepartment');
-Route::get('/certificates' , 'CertificateController@index')->name('site.certificates.index');
+Route::get('/stores/europa', 'StoreController@getEuropeanStores')->name('site.stores.europa');
+Route::get('/stores/north-america', 'StoreController@getNorthAmericanStores')->name('site.stores.northamerica');
+Route::get('/stores/south-america', 'StoreController@getSouthAmericanStores')->name('site.stores.southamerica');
+Route::get('/stores/africa', 'StoreController@getAfricanStores')->name('site.stores.africa');
+Route::get('/stores/asia', 'StoreController@getAsianStores')->name('site.stores.asia');
+Route::get('/stores/oceania', 'StoreController@getOceanianStores')->name('site.stores.oceania');
+Route::get('/stores/{dep}', 'StoreController@getStoresForDepartment')->name('site.stores.fordepartment');
+Route::get('/geostores/{dep}', 'StoreController@getGeolocatedStoresForDepartment')->name('site.geostores.fordepartment');
+Route::get('/certificates', 'CertificateController@index')->name('site.certificates.index');
 
 Route::get('/lang/{locale}', 'LocalizationController@index');

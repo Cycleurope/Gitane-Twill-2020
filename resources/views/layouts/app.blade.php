@@ -1,40 +1,6 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="{{ App::getLocale() }}">
+<html dir="ltr" lang="{{ App::getLocale() }}" prefix="og: http://ogp.me/ns#">
     @include('layouts.head')
-
-    <style>
-    .marker {
-        background-color: #1f2f79;
-        background-size: cover;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        cursor: pointer;
-        border: 2px solid #00acee;
-    }
-    .marker-velox {
-        background-color: #8dd821;
-        background-size: cover;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        cursor: pointer;
-        border: 2px solid #111114;
-    }
-    .mapboxgl-popup {
-    border-radius: 30px !important;
-    }
-
-    .mapboxgl-popup-content {
-    text-align: center;
-    width: 480px;
-    border-radius: 10px !important;
-    -webkit-border-radius: 10px !important;
-    text-align: left;
-    font-size: 1.2em;
-    padding: 1em 1.5em !important;
-    }
-</style>
   <body>
     @include('layouts.frontmenu')
     @yield('content')

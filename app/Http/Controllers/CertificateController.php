@@ -13,7 +13,6 @@ class CertificateController extends Controller
     public function index()
     {
         $certs = Certificate::all();
-        dd($certs);
         return $certs;
     }
 }

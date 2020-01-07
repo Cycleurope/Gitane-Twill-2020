@@ -15,7 +15,8 @@ class FamilyController extends Controller
         $family = Family::forSlug($slug)->first();
         $family = app(FamilyRepository::class)->forSlug($slug);
         return view('site.family', [
-            'family' => $family
+            'family' => $family,
+            'slugs' => $family->slugs,
         ]);
     }
 }

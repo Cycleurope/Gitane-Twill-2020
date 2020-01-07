@@ -24,7 +24,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col py-5"><h1>{{ $page->title }}</h1></div>
+        <div class="col py-5"><h1>{{ $page->translate(app()->getLocale())->title }}</h1></div>
     </div>
 </div>
 

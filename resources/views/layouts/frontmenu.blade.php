@@ -17,7 +17,7 @@
             <ul class="nav navbar-nav ml-0 mr-0">
                 <li class="nav-item fad"><a class="nav-link" href="{{ route('site.stores', ['locale' => app()->getLocale()]) }}"><i class="fas fa-map-marker-alt mr-2"></i> @lang('common.find_a_dealer')</a></li>
             </ul>
-            @include('layouts.language-switcher')
+            @include('layouts.current-route-localization-switcher')
         </div>
     </nav>
     @include('layouts.header.families-navigation')

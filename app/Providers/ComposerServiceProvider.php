@@ -24,12 +24,12 @@ class ComposerServiceProvider extends ServiceProvider {
             $website_description        = app(SettingRepository::class)->byKey('website_description', 'seo');
             $website_keywords           = app(SettingRepository::class)->byKey('website_keywords', 'seo');
             $display_global_stores      = app(SettingRepository::class)->byKey('display_global_stores', 'display');
-            $google_analytics_script    = app(SettingsRepository::class)->byKey('google_analytics_script', 'analytics');
+            $google_analytics_script    = app(SettingRepository::class)->byKey('google_analytics_script', 'analytics');
             // Balises OpenGraph
-            $og_title_fr                = app(SettingsRepository::class)->byKey('opengraph_title_fr', 'opengraph');
-            $og_title_en                = app(SettingsRepository::class)->byKey('opengraph_title_en', 'opengraph');
-            $og_description_fr          = app(SettingsRepository::class)->byKey('opengraph_description_fr', 'opengraph');
-            $og_description_en          = app(SettingsRepository::class)->byKey('opengraph_description_en', 'opengraph');
+            $og_title_fr                = app(SettingRepository::class)->byKey('opengraph_title_fr', 'opengraph');
+            $og_title_en                = app(SettingRepository::class)->byKey('opengraph_title_en', 'opengraph');
+            $og_description_fr          = app(SettingRepository::class)->byKey('opengraph_description_fr', 'opengraph');
+            $og_description_en          = app(SettingRepository::class)->byKey('opengraph_description_en', 'opengraph');
 
             $view->with([
                 'website_prefix'        => $website_prefix,

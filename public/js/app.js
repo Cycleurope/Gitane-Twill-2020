@@ -313,42 +313,65 @@ $(document).ready(function() {
 });
 
 function displayStoreBlock(store) {
-    var store = store;
-    store_name = store.shopname;
-    store_address1 = store.address1;
-    store_address2 = store.address2;
-    store_postalcode = store.postalcode;
-    store_phone = store.phone;
-    store_email = store.email;
-    is_velox = store.velox;
+
+    var block_name = '';
+    var block_address = '';
+    var block_contact = '';
+    var li_phone = '';
+    var li_email = '';
+    var block_buttons = '';
+    var is_velox = store.velox;
+
     block_velox = '';
     if(is_velox) {
-        block_velox = `<h3>VELO & OXYGEN</h3>`;
+        block_velox = `<span class="subname">VELO & OXYGEN</span>`;
     }
 
-    if(store_address1 != null || store_address1 != '') {
-        block_address1 = store_address1;
-    }
-    if(store_address2 != null || store_address2 != '') {
-        block_address2 = `<br />`+store_address2;
-    }
-
-    var button_locateme = '';
-    if(store.latitude != null || store.longitude != null) {
-        console.log(store.latitude);
-        button_locateme = `<button class="locateme btn btn-framed filled filled-dark" data-lng="`+store.longitude+`" data-lat="`+store.latitude+`">Localiser</button>`;
-    }
-
-    var tpl = 
-    `<div class="dealer-item px-4 py-5">
-        <h2>`+store_name+`</h2>
+    block_name = `
+    <div class="label">
+        <span class="name">`+store.shopname+`</span>
         `+block_velox+`
-        `+store_address1+store_address2+`<br />`+store.postalcode+` `+store.city+`
-        <hr class="light">
-        <i class="fas fa-phone"></i> `+store.phone+`
-        <br /><i class="fas fa-paper-plane"></i> `+store.email+`
-        <br />`+button_locateme+
-    `</div>`;
+    </div>
+    `;
+
+    if(store.address1 != null) li_address1 = "<li>"+store.address1+"</li>";
+    if(store.address2 != null) li_address2 = "<li>"+store.address2+"</li>";
+
+    if(li_address1 != null || li_address2 != null) {
+        block_address = `
+        <div class="address">
+            `+li_address1+li_address2+`
+            <li>`+store.postalcode+` `+store.city+`</li>
+        </div>
+        `;
+    }
+
+    if(store.phone != '') li_phone = '<li><i class="fas fa-phone"></i> '+store.phone+'</li>';
+    if(store.email != '') li_email = '<li><i class="fas fa-paper-plane"></i> '+store.email+'</li>';
+
+    if(li_phone != null || li_email != null) {
+        block_contact = `
+        <div class="contact-info">
+            `+li_phone+li_email+`
+        </div>
+        `;
+    }
+
+    if(store.latitude != null || store.longitude != null) {
+        block_buttons = `
+        <div class="buttons d-none d-lg-block">
+            <button class="locateme btn btn-framed filled filled-dark" data-lng="`+store.longitude+`" data-lat="`+store.latitude+`">Localiser</button>
+        </div>`;
+    }
+
+    var tpl = `
+    <div class="dealer-item">
+        `+block_name+`
+        `+block_address+`
+        `+block_contact+`
+        `+block_buttons+`
+    </div>
+    `;
 
     return tpl;
 }

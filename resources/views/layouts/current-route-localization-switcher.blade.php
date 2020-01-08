@@ -11,11 +11,20 @@
             @endif
         @endforeach
     @else
-        @if(app()->getLocale() != "en")
-        <li class="nav-item"><a class="nav-link" href="/lang/en"><span class="flag-icon flag-icon-gb"> </span></a></li>
-        @endif
-        @if(app()->getLocale() != "fr")
-        <li class="nav-item"><a class="nav-link" href="/lang/fr"><span class="flag-icon flag-icon-fr"> </span></a></li>
+        @if(Route::currentRouteName() != "site.home")
+            @if(app()->getLocale() != "en")
+            <li class="nav-item"><a class="nav-link" href="{{ route(Route::currentRouteName(), ["locale" => 'en']) }}"><span class="flag-icon flag-icon-gb"> </span></a></li>
+            @endif
+            @if(app()->getLocale() != "fr")
+            <li class="nav-item"><a class="nav-link" href="{{ route(Route::currentRouteName(), ["locale" => 'fr']) }}"><span class="flag-icon flag-icon-fr"> </span></a></li>
+            @endif
+        @else
+            @if(app()->getLocale() != "en")
+            <li class="nav-item"><a class="nav-link" href="/lang/en"><span class="flag-icon flag-icon-gb"> </span></a></li>
+            @endif
+            @if(app()->getLocale() != "fr")
+            <li class="nav-item"><a class="nav-link" href="/lang/fr"><span class="flag-icon flag-icon-fr"> </span></a></li>
+            @endif
         @endif
     @endif
 </ul>

@@ -12,6 +12,12 @@
 
 @formField('input', [
     'translated' => true,
+    'name' => 'side_subtitle',
+    'label' => 'Sous-titre',
+])
+
+@formField('input', [
+    'translated' => true,
     'name' => 'side_content',
     'label' => 'Contenu',
     'type' => 'textarea',
@@ -19,84 +25,20 @@
 ])
 
 @formField('select', [
-    'name' => 'theme',
+    'name' => 'block_theme',
     'label' => 'Theme',
     'options' => [
         [
-            'value' => 'classic-white',
-            'label' => 'Classic / White'
+            'value' => 'gblock-theme-default',
+            'label' => 'Défaut (Fond Blanc)'
         ],
         [
-            'value' => 'classic-dark',
-            'label' => 'Classic / Dark'
+            'value' => 'gblock-theme-nightblue',
+            'label' => 'Night Blue'
         ],
         [
-            'value' => 'tangerine-titled',
-            'label' => 'Classic / Tangerine'
+            'value' => 'gblock-theme-dark',
+            'label' => 'Dark'
         ],
-        [
-            'value' => 'tangerine-full',
-            'label' => 'Tangerine / Full'
-        ],
-        [
-            'value' => 'tangerine-yellow-titled',
-            'label' => 'Tangerine / Yellow-Titled'
-        ],
-        [
-            'value' => 'tangerine-dark-titled',
-            'label' => 'Tangerine / Dark-Titled'
-        ],
-        [
-            'value' => 'twitterblue-dark-titled',
-            'label' => 'Twitter Blue / Dark-Titled'
-        ],
-        [
-            'value' => 'twitterblue-light-titled',
-            'label' => 'Twitter Blue / Light-Titled'
-        ],
-        [
-            'value' => 'darkblue-titled',
-            'label' => 'Darkblue-Titled'
-        ],
-        [
-            'value' => 'darkblue-full',
-            'label' => 'Darkblue / Full'
-        ],
-        [
-            'value' => 'darkblue-twitterblue-titled',
-            'label' => 'Darkblue / Twitterblue-Titled'
-        ],
-        [
-            'value' => 'darkblue-red-titled',
-            'label' => 'Darkblue / Red-Titled'
-        ],
-        [
-            'value' => 'twitterblue-titled',
-            'label' => 'Classic / TwitterBlue-Titled'
-        ],
-        [
-            'value' => 'darkblue-full',
-            'label' => 'Dark Blue / Full'
-        ],
-        [
-            'value' => 'darklime',
-            'label' => 'Dark Lime'
-        ],
-        [
-            'value' => 'darklime-titled',
-            'label' => 'Dark / Lime Titled'
-        ],
-        [
-            'value' => 'pink-full',
-            'label' => 'Pink / Full'
-        ],
-        [
-            'value' => 'pink-twitterblue-titled',
-            'label' => 'Pink / Twitterblue Titled'
-        ],
-        [
-            'value' => 'pink-titled',
-            'label' => 'Classic - Pink-Titled'
-        ],
-    ]
+    ],
 ])

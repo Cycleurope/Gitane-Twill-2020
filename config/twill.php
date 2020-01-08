@@ -197,6 +197,20 @@ return [
                     ] ,
                 ] ,
             ] ,
+            'feature' => [
+                'default' => [
+                    [
+                        'name' => 'landscape' ,
+                        'ratio' => 1800 / 1200 ,
+                    ] ,
+                ] ,
+                'squared' => [
+                    [
+                        'name' => 'squared' ,
+                        'ratio' => 800 / 800 ,
+                    ] ,
+                ] ,
+            ] ,
             'left_picture' => [
                 'default' => [
                     [

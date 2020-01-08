@@ -8,7 +8,7 @@
                 @if($block->translatedInput('side_subtitle') != '')
                 <div><span class="subtitle">{{ $block->translatedinput('side_subtitle') }}</span></div>
                 @endif
-                {{ $block->translatedinput('side_content') }}
+                <p>{{ $block->translatedinput('side_content') }}</p>
             </div>
         </div>
     </div>

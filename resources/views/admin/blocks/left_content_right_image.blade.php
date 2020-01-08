@@ -1,5 +1,5 @@
 @formField('medias', [
-    'name' => 'picture',
+    'name' => 'feature',
     'label' => 'Image',
     'note' => 'Largeur minimal de l\'image : 1200px',
 ])

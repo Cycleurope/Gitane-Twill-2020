@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="col-12 col-md-6 col-lg-6 px-0 picture-container order-first order-md-last">
-        <img src="{{ $block->image('feature', 'square') }}" alt="" class="d-block d-lg-none">
-        <img src="{{ $block->image('feature', 'landscape') }}" alt="" class="d-none d-lg-block">
+        <img src="{{ $block->image('feature', 'squared') }}" alt="" class="d-block d-lg-none">
+        <img src="{{ $block->image('feature', 'default') }}" alt="" class="d-none d-lg-block">
     </div>
 </div>

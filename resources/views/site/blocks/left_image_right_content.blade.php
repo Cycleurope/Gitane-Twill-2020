@@ -1,7 +1,7 @@
 <div class="row gblock-feature gblock-left-picture-right-content {{ $block->input('block_theme') }}">
     <div class="col-12 col-md-6 col-lg-6 px-0 picture-container">
-        <img src="{{ $block->image('feature', 'square') }}" alt="" class="d-block d-lg-none">
-        <img src="{{ $block->image('feature', 'landscape') }}" alt="" class="d-none d-lg-block">
+        <img src="{{ $block->image('feature', 'squared') }}" alt="" class="d-block d-lg-none">
+        <img src="{{ $block->image('feature', 'default') }}" alt="" class="d-none d-lg-block">
     </div>
     <div class="col-12 col-md-6 col-xl-5 px-0">
         <div class="inner">

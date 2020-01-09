@@ -1,4 +1,4 @@
-@if($bike->hasImage('desktop_cover'))
+@if($bike->hasImage('cover'))
 <div id="cover" class="container-fluid">
     <div class="row">
         <div class="col-12 px-0">

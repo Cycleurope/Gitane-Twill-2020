@@ -57,7 +57,7 @@ class Bike extends Model
             'default' => [ // crop name
                 [
                     'name' => 'default' , // ratio name , same as crop name if single
-                    'ratio' => 1800 / 600 , // ratio as a fraction or number
+                    'ratio' => 1800 / 450 , // ratio as a fraction or number
                 ] ,
             ] ,
         ],

@@ -1,4 +1,7 @@
 <div id="boxes" class="row justify-content-center">
+    @if($block->translatedInput('heading') != '')
+    <h2><span>{{ $block->translatedInput('heading') }}</span></h2>
+    @endif
     @foreach( $block->children as $feature)
     <div class="box-feature col-12 col-lg-3">
         <div class="box-feature--picture">

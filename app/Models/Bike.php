@@ -60,20 +60,18 @@ class Bike extends Model
                     'ratio' => 1800 / 600 , // ratio as a fraction or number
                 ] ,
             ] ,
-                ],
-        'tablet_cover' => [ // role name
+        ],
+        'cover' => [ // role name
             'default' => [ // crop name
                 [
                     'name' => 'default' , // ratio name , same as crop name if single
-                    'ratio' => 16 / 9 , // ratio as a fraction or number
+                    'ratio' => 1800 / 1200 , // ratio as a fraction or number
                 ] ,
             ] ,
-        ] ,
-        'mobile_cover' => [ // role name
-            'default' => [ // crop name
+            'squared' => [ // crop name
                 [
-                    'name' => 'default' , // ratio name , same as crop name if single
-                    'ratio' => 16 / 9 , // ratio as a fraction or number
+                    'name' => 'squared' ,// ratio name , same as crop name if single
+                    'ratio' => 16 / 16 , // ratio as a fraction or number
                 ] ,
             ] ,
         ] ,

@@ -43,7 +43,7 @@
     ])
 
     @formField('medias' ,[
-        'name' => 'desktop_cover' ,
+        'name' => 'cover' ,
         'label' => 'Couverture (Desktop)' ,
     ])
 

@@ -349,7 +349,7 @@ function displayStoreBlock(store) {
     if(store.phone != '') li_phone = '<li><i class="fas fa-phone"></i> '+store.phone+'</li>';
     if(store.email != '') li_email = '<li><i class="fas fa-paper-plane"></i> '+store.email+'</li>';
 
-    if(li_phone != null || li_email != null) {
+    if(li_phone != '' || li_email != '') {
         block_contact = `
         <div class="contact-info">
             `+li_phone+li_email+`

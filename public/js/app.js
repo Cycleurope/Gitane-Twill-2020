@@ -248,6 +248,7 @@ $(document).ready(function() {
                         essential: true // this animation is considered essential with respect to prefers-reduced-motion
                         });
                 });
+                $('.marker').remove();
                 storesJSON.stores.forEach(function(marker) {
 
                     var el = document.createElement('div');

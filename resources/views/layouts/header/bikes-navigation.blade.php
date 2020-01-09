@@ -4,7 +4,7 @@
         <div class="row">
             <div id="bike-navigation-left" class="mr-auto px-3 py-2">
                 <span class="gitane-logo">G</span>
-                <span class="name">{{ $bike->name}} {{ $bike->subname }}</span>
+                <span class="name">{{ $bike->translate(app()->getLocale())->name}} {{ $bike->translate(app()->getLocale())->subname }}</span>
                 <span class="d-none d-lg-inline">
                 <a id="bn-overview" href="#product-overview" class="badge badge-pill bike-nav-item current-item">@lang('bike.overview')</a>
                 @if(count($bike->blocks) > 0)

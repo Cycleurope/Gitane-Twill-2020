@@ -23,7 +23,8 @@ class Bike extends Model
         'reference', 'price_from', 'public_price',
         'position', 'datasheet_theme', 'geometries_theme',
         'price_from', 'public_price', 'datasheet_theme', 'geometries_theme',
-    ]  ;
+        'shoplink'
+    ];
 
     protected $indexOptions = [
         'reorder' => true,

@@ -1,6 +1,7 @@
 @extends('twill::layouts.form', [
     'additionalFieldsets' => [
         ['fieldset' => 'seo' , 'label' => 'SEO'] ,
+        ['fieldset' => 'links' , 'label' => 'Liens'] ,
         ['fieldset' => 'frameset', 'label' => 'Cadre'],
         ['fieldset' => 'electric', 'label' => 'e-Specs'],
         ['fieldset' => 'transmission' , 'label' => 'Transmission'],
@@ -401,6 +402,16 @@
             'label' => 'Fiche technique',
             'note' => 'La fiche technique doit être au format PDF.'
         ])
+    </a17-fieldset>
+
+    <a17-fieldset title="Liens" id="links" :open="false">
+
+        @formField('input', [
+            'label' => 'Lien e-Commerce (URL)',
+            'name' => 'shoplink',
+            'translated' => false,
+        ])
+
     </a17-fieldset>
 
     <a17-fieldset title="SEO" id="seo" :open="false">

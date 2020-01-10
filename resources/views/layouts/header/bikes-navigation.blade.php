@@ -23,7 +23,11 @@
             </span>
             </div>
             <div id="bike-navigation-right" class="ml-auto">
-                <a href="{{ route('site.stores', ['locale' => app()->getLocale()]) }}" class="buy-button"><i class="fa fa-shopping-cart"></i></span></a>
+                @if($bike->shoplink != '')
+                    <a href="{{ $bike->shoplink }}" class="buy-button" target="_blank"><i class="fa fa-shopping-cart"></i></span></a>
+                @else
+                    <a href="{{ route('site.stores', ['locale' => app()->getLocale()]) }}" class="buy-button"><i class="fa fa-shopping-cart"></i></span></a>
+                @endif
             </div>
         </div>
     </div>

@@ -175,7 +175,7 @@ return [
             'feature_item' => [
                 'title' => 'Feature' ,
                 'trigger' => 'Add Feature' ,
-                'component' => 'a17-block-feature_item' ,
+                'component' => 'a17-block-video' ,
                 'max' => 4
             ]
         ] ,

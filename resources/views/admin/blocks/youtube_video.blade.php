@@ -9,9 +9,16 @@
     'note' => 'Largeur minimale de l\'image : 1200px' ,
 ])
 
-@formField('medias' , [
+@formField('input' , [
     'name' => 'video_title' ,
     'label' => 'Titre de la vidéo' ,
+    'translated' => true
+])
+
+@formField('wysiwyg' , [
+    'name' => 'video_description' ,
+    'label' => 'Description courte',
+    'translated' => true,
 ])
 
 @formField('medias' , [
